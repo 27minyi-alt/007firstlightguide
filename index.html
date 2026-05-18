@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>007 First Light Guide – Missions, Weapons, Gadgets & Walkthrough</title>
+<meta name="description" content="Complete guide for 007 First Light. Mission walkthroughs, weapons database, gadgets, trophies/achievements, and tips for IO Interactive's James Bond origin story game.">
+<meta name="keywords" content="007 First Light guide, 007 First Light walkthrough, 007 First Light missions, 007 First Light weapons, James Bond game 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-dim: #7a6130;
+    --black: #080808;
+    --dark: #0f0f0f;
+    --dark2: #161616;
+    --dark3: #1e1e1e;
+    --white: #f0ead8;
+    --gray: #888;
+    --red: #8b1a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* GRAIN OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* HEADER */
+  header {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .header-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 80% at 20% 50%, rgba(139,26,26,0.12) 0%, transparent 60%),
+      linear-gradient(180deg, #080808 0%, #0d0a05 50%, #080808 100%);
+  }
+
+  .header-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px),
+      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px);
+  }
+
+  .gun-barrel {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(201,168,76,0.4) 40%, rgba(201,168,76,0.1) 60%, transparent);
+    animation: barrel-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes barrel-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 2;
+    animation: fade-up 1.2s ease both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 0.2em;
+  }
+
+  h1 .number {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  h1 .subtitle {
+    display: block;
+    font-size: 0.35em;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    font-weight: 300;
+    margin-top: 0.5em;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+
+  .release-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--gold-dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+    text-transform: uppercase;
+  }
+
+  .release-badge::before {
+    content: '●';
+    color: var(--gold);
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,8,8,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 0 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* SECTIONS */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+
+  h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 1.5rem 0 3rem;
+  }
+
+  /* OVERVIEW GRID */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.1);
+    margin-bottom: 3rem;
+  }
+
+  .overview-card {
+    background: var(--dark);
+    padding: 2rem;
+    transition: background 0.3s;
+  }
+
+  .overview-card:hover { background: var(--dark2); }
+
+  .overview-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .overview-card h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .overview-card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  /* MISSIONS */
+  .missions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: rgba(201,168,76,0.08);
+  }
+
+  .mission-item {
+    background: var(--dark);
+    padding: 1.8rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-left: 2px solid transparent;
+  }
+
+  .mission-item:hover {
+    background: var(--dark2);
+    border-left-color: var(--gold);
+  }
+
+  .mission-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+    padding-top: 0.3rem;
+    min-width: 2.5rem;
+  }
+
+  .mission-info h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .mission-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid;
+  }
+
+  .tag-location { color: var(--gray); border-color: rgba(136,136,136,0.3); }
+  .tag-easy { color: #5a9a5a; border-color: rgba(90,154,90,0.3); }
+  .tag-medium { color: var(--gold); border-color: rgba(201,168,76,0.3); }
+  .tag-hard { color: #c87a3a; border-color: rgba(200,122,58,0.3); }
+  .tag-expert { color: #c83a3a; border-color: rgba(200,58,58,0.3); }
+
+  .mission-status {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+    white-space: nowrap;
+  }
+
+  .mission-detail {
+    display: none;
+    grid-column: 2 / -1;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .mission-item.open .mission-detail { display: block; }
+  .mission-item.open { border-left-color: var(--gold); background: var(--dark2); }
+
+  /* WEAPONS */
+  .weapons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: rgba(201,168,76,0.08);
+  }
+
+  .weapon-card {
+    background: var(--dark);
+    padding: 1.8rem;
+    transition: background 0.2s;
+  }
+
+  .weapon-card:hover { background: var(--dark2); }
+
+  .weapon-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .weapon-card h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .stat-bar {
+    margin-bottom: 0.6rem;
+  }
+
+  .stat-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .bar-track {
+    height: 2px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+    transition: width 1s ease;
+  }
+
+  /* GADGETS */
+  .gadgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .gadget-card {
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .gadget-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .gadget-card:hover { border-color: rgba(201,168,76,0.4); }
+  .gadget-card:hover::before { transform: translateX(100%); }
+
+  .gadget-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 0.8rem;
+  }
+
+  .gadget-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .gadget-tip {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(201,168,76,0.05);
+    border-left: 2px solid var(--gold-dim);
+    font-size: 0.85rem;
+    color: var(--white);
+    font-style: italic;
+  }
+
+  /* TIPS */
+  .tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tip-item {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.5rem;
+    background: var(--dark);
+    border: 1px solid rgba(201,168,76,0.08);
+    transition: border-color 0.2s;
+  }
+
+  .tip-item:hover { border-color: rgba(201,168,76,0.25); }
+
+  .tip-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.8rem;
+    color: rgba(201,168,76,0.2);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .tip-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .tip-item p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* AD PLACEHOLDER */
+  .ad-banner {
+    background: var(--dark2);
+    border: 1px dashed rgba(201,168,76,0.2);
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    color: var(--gold-dim);
+    line-height: 1.6;
+  }
+
+  /* ADSENSE SLOT */
+  .adsense-slot {
+    display: block;
+    min-height: 90px;
+    background: var(--dark2);
+    border: 1px dashed rgba(201,168,76,0.15);
+    margin: 2rem 0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .mission-item { grid-template-columns: auto 1fr; }
+    .mission-status { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+  <div class="header-bg"></div>
+  <div class="header-lines"></div>
+  <div class="gun-barrel"></div>
+  <div class="header-content">
+    <p class="eyebrow">Complete Strategy Guide</p>
+    <h1>
+      <span class="number">007</span> First Light
+      <span class="subtitle">Mission Walkthroughs · Weapons · Gadgets</span>
+    </h1>
+    <p class="tagline">Earn the number. Master the mission.</p>
+    <div class="release-badge">Releasing May 27, 2026 · PS5 · PC · Xbox Series X/S</div>
+  </div>
+  <div class="scroll-hint">Scroll to Begin</div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">007 First Light · Guide</a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#missions">Missions</a></li>
+      <li><a href="#weapons">Weapons</a></li>
+      <li><a href="#gadgets">Gadgets</a></li>
+      <li><a href="#tips">Tips</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ADSENSE TOP -->
+<div style="max-width:1100px;margin:0 auto;padding:1rem 2rem;">
+  <!-- Google AdSense: Replace with your actual ad code -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+  <div class="adsense-slot"></div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <p class="section-label">// 01 · Game Overview</p>
+  <h2>Become <em>Bond</em></h2>
+  <div class="divider"></div>
+  <p style="color:var(--gray);max-width:680px;margin-bottom:2.5rem;font-size:1rem;">
+    007 First Light is James Bond's origin story — developed by IO Interactive (Hitman series). You play as a 26-year-old Bond completing his first mission to earn the coveted 00 status. Stealth, gadgets, and choice define your path.
+  </p>
+  <div class="overview-grid">
+    <div class="overview-card">
+      <div class="icon">🎮</div>
+      <h3>Developer</h3>
+      <p>IO Interactive — creators of the Hitman series</p>
+    </div>
+    <div class="overview-card">
+      <div class="icon">📅</div>
+      <h3>Release Date</h3>
+      <p>May 27, 2026 · PS5, PC, Xbox Series X/S</p>
+    </div>
+    <div class="overview-card">
+      <div class="icon">🌍</div>
+      <h3>Locations</h3>
+      <p>London · Slovakia · Iceland · Monaco · Tokyo · Dubai</p>
+    </div>
+    <div class="overview-card">
+      <div class="icon">🕵️</div>
+      <h3>Playstyle</h3>
+      <p>Go loud or go silent — multiple approaches per mission</p>
+    </div>
+    <div class="overview-card">
+      <div class="icon">🎭</div>
+      <h3>Bond</h3>
+      <p>Patrick Gibson as a young, inexperienced James Bond</p>
+    </div>
+    <div class="overview-card">
+      <div class="icon">🏆</div>
+      <h3>Early Access</h3>
+      <p>Digital pre-order grants 24-hour early access (May 26)</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section id="missions">
+  <p class="section-label">// 02 · Mission Walkthroughs</p>
+  <h2>Every <em>Mission</em>, Every Secret</h2>
+  <div class="divider"></div>
+  <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:0.9rem;font-family:'DM Mono',monospace;letter-spacing:0.05em;">
+    Full walkthroughs will be updated on launch day, May 27. Known mission locations confirmed so far:
+  </p>
+  <div class="missions-list">
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-01</div>
+      <div class="mission-info">
+        <h3>The Grand Carpathian</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Slovakia</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
+        <div class="mission-detail">
+          <p>Bond's first field assignment takes place at the Grand Carpathian Hotel, hosting a global chess tournament. Navigate a world of intrigue among the High Tatra Mountains. Expect your first encounters with social stealth — bluffing past guards is key here. The chess tournament provides excellent cover for reconnaissance.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Don't rush. Learn the patrol routes in the first floor before attempting the upper levels.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-02</div>
+      <div class="mission-info">
+        <h3>Operation: Thames</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">London</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
+        <div class="mission-detail">
+          <p>Bond returns to MI6 headquarters following a mission gone wrong. London serves as both briefing ground and a playground for a tense urban chase sequence. Meet M, Q, and Moneypenny in their reimagined origin-story roles.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Pay attention to dialogue — Q's gadget hints are embedded in conversations, not tutorials.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-03</div>
+      <div class="mission-info">
+        <h3>White Silence</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Iceland</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>One of the game's most visually striking missions, set across a frozen Icelandic landscape. Stealth is heavily favored here — gunshots carry far in open terrain. The rogue agent Bond is chasing makes their first real appearance.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Use the Q-Watch thermal scan to detect enemies through walls and snowdrifts. Your visibility is also reduced — enemies can't see far either.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-04</div>
+      <div class="mission-info">
+        <h3>Côte d'Azure</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Monaco</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
+        <div class="mission-detail">
+          <p>A classic Bond setting — glamour, casinos, and danger. Monaco is the game's most open social-stealth mission. Multiple disguise opportunities and NPC interaction trees. Vehicle chase sequence confirmed on the coastal highway.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Your tuxedo outfit reduces suspicion in the casino. Bring the Dart Gun — it's the cleanest non-lethal option in crowds.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-05</div>
+      <div class="mission-info">
+        <h3>Neon Labyrinth</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Tokyo</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>Tokyo's dense urban environment turns the mission into a vertical stealth puzzle. Multiple floors, dense crowds, and electronic surveillance make this a gadget-heavy mission. The Q-Watch hacking tool gets its most important use here.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Hack security cameras before entering restricted zones — undetected camera feeds reduce patrol frequency.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-06</div>
+      <div class="mission-info">
+        <h3>Final Reckoning</h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Dubai</span>
+          <span class="tag tag-expert">Expert</span>
+        </div>
+        <div class="mission-detail">
+          <p>The climactic confrontation against Bawma (Lenny Kravitz), the game's primary antagonist. Dubai's skyline becomes the backdrop for 007 First Light's most demanding sequence. All gadgets and combat skills from the game converge here. Full walkthrough posted on launch day.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Don't skip the Replay mode on earlier missions — the Expert modifiers in Dubai require mastery of mechanics introduced in prior levels.</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AD MID -->
+<div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+  <div class="adsense-slot"></div>
+</div>
+
+<!-- WEAPONS -->
+<section id="weapons">
+  <p class="section-label">// 03 · Weapons Database</p>
+  <h2>Arsenal of a <em>00 Agent</em></h2>
+  <div class="divider"></div>
+  <div class="weapons-grid">
+
+    <div class="weapon-card">
+      <div class="weapon-type">Pistol · Sidearm</div>
+      <h3>Walther PPK/S</h3>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Range</span><span>Short</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Stealth</span><span>High</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Bond's signature weapon. Suppressed variant available from Mission 2 onward. Best for takedowns without raising alarm.</p>
+    </div>
+
+    <div class="weapon-card">
+      <div class="weapon-type">Rifle · Long Range</div>
+      <h3>Arctic Precision Rifle</h3>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Damage</span><span>Very High</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Range</span><span>Very Long</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Stealth</span><span>Low</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Unlocked in Iceland. One-shot kills at range but loud. Essential for the open-terrain sections of Mission 3.</p>
+    </div>
+
+    <div class="weapon-card">
+      <div class="weapon-type">Shotgun · Close Range</div>
+      <h3>Combat Breacher</h3>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Damage</span><span>Very High</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Range</span><span>Short</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Stealth</span><span>None</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">When stealth fails, this ends encounters fast. Dubai's indoor sections reward aggressive play — keep this on hand for the finale.</p>
+    </div>
+
+    <div class="weapon-card">
+      <div class="weapon-type">SMG · Versatile</div>
+      <h3>Q-Series Compact</h3>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Range</span><span>Medium</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Stealth</span><span>Medium</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Custom Q Branch weapon. Best all-rounder for players who mix stealth and action. Upgradeable with attachments found in each mission.</p>
+    </div>
+
+    <div class="weapon-card">
+      <div class="weapon-type">Melee · Hand-to-Hand</div>
+      <h3>Bond Combat System</h3>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Range</span><span>None</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+      </div>
+      <div class="stat-bar">
+        <div class="stat-label"><span>Stealth</span><span>Very High</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Inspired by Arkham combat. Counters, environmental takedowns, and choke holds. Silent and effective — the purist's choice.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GADGETS -->
+<section id="gadgets">
+  <p class="section-label">// 04 · Q Branch Gadgets</p>
+  <h2>Tools of the <em>Trade</em></h2>
+  <div class="divider"></div>
+  <div class="gadgets-grid">
+
+    <div class="gadget-card">
+      <h3>Q-Watch</h3>
+      <p>Bond's primary tool. Features a spy scanner to detect enemies through walls, a hacking module for electronic locks and cameras, and a grapple wire for vertical traversal.</p>
+      <div class="gadget-tip">Use the scanner before entering every new room — it reveals enemy counts, patrol patterns, and hidden loot.</div>
+    </div>
+
+    <div class="gadget-card">
+      <h3>Dart Gun</h3>
+      <p>Non-lethal takedown at range. Darts cause targets to slump silently — no body reaction noise. Essential for Monaco's crowded social spaces where bodies can't be left in the open.</p>
+      <div class="gadget-tip">Pair with the Q-Watch scanner. Tag targets, tranq from a distance, move on. Fastest stealth clear method.</div>
+    </div>
+
+    <div class="gadget-card">
+      <h3>Earphones (Signal Jammer)</h3>
+      <p>Disguised as earphones, this device jams radio communications in a short radius — preventing alerted guards from calling backup for a limited window.</p>
+      <div class="gadget-tip">Activate before triggering any alarm. Gives you 15–20 seconds to neutralize the threat before the call goes through.</div>
+    </div>
+
+    <div class="gadget-card">
+      <h3>Explosive Pen</h3>
+      <p>Classic Bond. The pen contains a shaped charge that can be remotely detonated. Useful for destroying equipment, breaching walls, or creating distractions.</p>
+      <div class="gadget-tip">In Tokyo, several locked rooms can only be opened by blowing an adjacent wall panel — the pen is the key.</div>
+    </div>
+
+    <div class="gadget-card">
+      <h3>Lighter (Fire Starter)</h3>
+      <p>Not just a lighter — contains a micro-torch hot enough to melt certain padlocks and fuse electrical panels. Also useful for environmental interactions.</p>
+      <div class="gadget-tip">Found in Mission 1 at Slovakia. Don't sell or replace it — it's required for an unlockable route in the Dubai finale.</div>
+    </div>
+
+    <div class="gadget-card">
+      <h3>Q-Phone</h3>
+      <p>Bond's encrypted smartphone. Used for mission briefings and as a portable hacking device. In several missions, specific NPC phones can be cloned to unlock new dialogue paths.</p>
+      <div class="gadget-tip">Always clone phones when you get close to key NPCs — unlocks alternate mission routes and bonus intel collectibles.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIPS -->
+<section id="tips">
+  <p class="section-label">// 05 · Beginner Tips</p>
+  <h2>Play Like a <em>00 Agent</em></h2>
+  <div class="divider"></div>
+  <div class="tips-list">
+
+    <div class="tip-item">
+      <div class="tip-num">01</div>
+      <div>
+        <h3>Scan Every Room First</h3>
+        <p>The Q-Watch scanner is your most powerful tool. Before entering any restricted area, scan through the wall to count enemies, locate cameras, and find collectibles. This single habit separates clean runs from chaotic ones.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">02</div>
+      <div>
+        <h3>Stealth Pays More</h3>
+        <p>Mission ratings and unlock bonuses heavily favor silent playthroughs. Loud runs are valid, but the best gadget upgrades and alternate mission routes are only accessible if you maintain low alert levels.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">03</div>
+      <div>
+        <h3>Listen to Dialogue</h3>
+        <p>IO Interactive hides mission-critical information in ambient NPC conversations — guard schedules, code locations, even full alternate routes. Don't skip dialogue. There are no tutorial pop-ups explaining these secrets.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">04</div>
+      <div>
+        <h3>Replay Missions with Modifiers</h3>
+        <p>The Replay mode isn't just for trophies. Each mission has Challenge Modifiers that unlock new gadgets and story intel when completed. The best builds for the Dubai finale require modifier rewards from earlier missions.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">05</div>
+      <div>
+        <h3>Pick Up Enemy Weapons Strategically</h3>
+        <p>Bond can carry 2 weapons. Your loadout before each mission matters, but enemy drops fill gaps mid-mission. Prioritize suppressed weapons from downed enemies — loudness is your biggest enemy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AD BOTTOM -->
+<div style="max-width:1100px;margin:0 auto;padding:0 2rem 3rem;">
+  <div class="adsense-slot"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">007 First Light · Strategy Guide</div>
+    <p>Fan-made guide. Updated continuously from launch day, May 27, 2026.<br>
+    007 First Light © IO Interactive / Metro-Goldwyn-Mayer. This is an unofficial guide site.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMission(el) {
+    el.classList.toggle('open');
+    const status = el.querySelector('.mission-status');
+    status.textContent = el.classList.contains('open') ? 'Click to close' : 'Click to expand';
+  }
+
+  // Animate stat bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+          bar.style.width = bar.style.width;
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.weapon-card').forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
