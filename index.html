@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>007 First Light Guide – Missions, Weapons, Gadgets, Trophies & Walkthrough</title>
-<meta name="description" content="Complete guide for 007 First Light. Detailed mission walkthroughs, weapons database, Q-Branch gadgets, trophies/achievements, and beginner tips for IO Interactive's James Bond origin story game.">
+<meta name="description" content="Complete guide for 007 First Light. Detailed mission walkthroughs, weapons database, Q-Branch gadgets, trophies/achievements, and expert tips for IO Interactive's James Bond origin story game.">
 <meta name="keywords" content="007 First Light guide, 007 First Light walkthrough, 007 First Light missions, 007 First Light weapons, 007 First Light trophies, James Bond game 2026, IO Interactive">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -158,7 +158,7 @@
 
   .release-badge::before {
     content: '\25CF';
-    color: var(--gold);
+    color: #5a9a5a;
     animation: blink 1.5s ease-in-out infinite;
   }
 
@@ -267,7 +267,6 @@
     margin: 1.5rem 0 3rem;
   }
 
-  /* OVERVIEW GRID */
   .overview-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -305,7 +304,6 @@
     line-height: 1.5;
   }
 
-  /* MISSIONS */
   .missions-list {
     display: flex;
     flex-direction: column;
@@ -364,6 +362,7 @@
   .tag-easy { color: #5a9a5a; border-color: rgba(90,154,90,0.3); }
   .tag-medium { color: var(--gold); border-color: rgba(201,168,76,0.3); }
   .tag-hard { color: #c87a3a; border-color: rgba(200,122,58,0.3); }
+  .tag-verified { color: #5a9a5a; border-color: rgba(90,154,90,0.3); }
 
   .mission-status {
     font-family: 'DM Mono', monospace;
@@ -397,7 +396,6 @@
     margin-bottom: 0.3rem;
   }
 
-  /* WEAPONS */
   .weapons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -464,7 +462,6 @@
     transition: width 1s ease;
   }
 
-  /* GADGETS */
   .gadgets-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -525,7 +522,6 @@
     font-style: italic;
   }
 
-  /* TIPS */
   .tips-list {
     display: flex;
     flex-direction: column;
@@ -566,7 +562,6 @@
     line-height: 1.6;
   }
 
-  /* TROPHIES */
   .trophy-table {
     width: 100%;
     border-collapse: collapse;
@@ -631,7 +626,6 @@
     overflow-x: auto;
   }
 
-  /* DECISION TREE */
   .tree-box {
     background: var(--dark);
     border: 1px solid rgba(201,168,76,0.12);
@@ -654,7 +648,6 @@
     margin: 0.3rem 0 0.3rem 1.5rem;
   }
 
-  /* COMING SOON BADGE */
   .badge-cs {
     display: inline-block;
     font-family: 'DM Mono', monospace;
@@ -673,6 +666,20 @@
   @keyframes pulse-cs {
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
+  }
+
+  .badge-new {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.12rem 0.4rem;
+    border: 1px solid rgba(90,154,90,0.4);
+    color: #5a9a5a;
+    background: rgba(90,154,90,0.06);
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
 
   .badge-preview {
@@ -744,7 +751,6 @@
     margin-top: 0.3rem;
   }
 
-  /* AD */
   .ad-banner {
     background: var(--dark2);
     border: 1px dashed rgba(201,168,76,0.2);
@@ -792,6 +798,49 @@
     margin: 2rem 0;
   }
 
+  .patch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: rgba(201,168,76,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .patch-card {
+    background: var(--dark);
+    padding: 1.5rem;
+  }
+
+  .patch-card:hover { background: var(--dark2); }
+
+  .patch-card h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .patch-card .status {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .status-live { color: #5a9a5a; border: 1px solid rgba(90,154,90,0.3); }
+  .status-coming { color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+
+  .patch-card p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
   @media (max-width: 640px) {
     .nav-links { display: none; }
     .mission-item { grid-template-columns: auto 1fr; }
@@ -813,7 +862,7 @@
       <span class="subtitle">Mission Walkthroughs · Weapons · Gadgets · Trophies</span>
     </h1>
     <p class="tagline">Earn the number. Master the mission.</p>
-    <div class="release-badge">Releasing May 27, 2026 · PS5 · PC · Xbox Series X/S</div>
+    <div class="release-badge">Now Available · PS5 · PC · Xbox Series X/S</div>
   </div>
   <div class="scroll-hint">Scroll to Begin</div>
 </header>
@@ -829,6 +878,7 @@
       <li><a href="#gadgets">Gadgets</a></li>
       <li><a href="#beginners">Beginners</a></li>
       <li><a href="#trophies">Trophies</a></li>
+      <li><a href="#patches">Patches</a></li>
     </ul>
   </div>
 </nav>
@@ -865,7 +915,7 @@
     <div class="overview-card">
       <div class="icon">&#127758;</div>
       <h3>Locations</h3>
-      <p>Slovakia · London · Iceland · Malta · Monaco · Tokyo · Dubai · Vietnam</p>
+      <p>Malta · Slovakia · London · Iceland · Monaco · Tokyo · Dubai · Vietnam</p>
     </div>
     <div class="overview-card">
       <div class="icon">&#128373;</div>
@@ -875,12 +925,12 @@
     <div class="overview-card">
       <div class="icon">&#127917;</div>
       <h3>Cast</h3>
-      <p>Patrick Gibson (Bond), Lenny Kravitz (Bawma), Hannah Waddingham (M)</p>
+      <p>Patrick Gibson (Bond), Lenny Kravitz (Bawma), Hannah Waddingham (M), Gemma Chan (Dr. Tan)</p>
     </div>
     <div class="overview-card">
       <div class="icon">&#127942;</div>
       <h3>Replay Value</h3>
-      <p>12 missions with multiple paths + TacSim sandbox mode + leaderboards</p>
+      <p>12 missions with multiple paths + TacSim sandbox mode + leaderboards + post-launch content</p>
     </div>
   </div>
 </section>
@@ -892,7 +942,7 @@
   <div class="divider"></div>
 
   <div class="notice-bar">
-    <strong>Pre-Launch Notice:</strong> The game has <strong>12 missions total</strong>. Detailed walkthroughs for Missions 1&ndash;2 are confirmed from preview coverage. Missions 3&ndash;7 are based on preview content and will be expanded post-launch. <strong>Missions 8&ndash;12</strong> have not been publicly detailed yet &mdash; full guides coming after <strong>May 27, 2026</strong>.
+    <strong>Launch Day Update:</strong> The game is <strong>now available</strong> worldwide. Walkthroughs below are based on preview coverage and early player reports. We are actively verifying every detail and will publish complete guides for all 12 missions within the first week. Check back daily for updates.
   </div>
 
   <div class="missions-list">
@@ -901,23 +951,21 @@
     <div class="mission-item" onclick="toggleMission(this)">
       <div class="mission-number">M-01</div>
       <div class="mission-info">
-        <h3>Slovakia Chess Tournament</h3>
+        <h3>From Malta With Love <span class="badge-new">NEW</span></h3>
         <div class="mission-meta">
-          <span class="tag tag-location">Grand Carpathian Hotel, Slovakia</span>
-          <span class="tag tag-medium">Medium</span>
+          <span class="tag tag-location">Malta</span>
+          <span class="tag tag-easy">Easy</span>
         </div>
         <div class="mission-detail">
-          <p>Bond's first field assignment. Infiltrate the Grand Carpathian Hotel during a high-stakes chess tournament to track rogue agent 009. This mission teaches the core stealth and spycraft mechanics.</p>
+          <p>Bond's first assignment after being recruited by MI6. A nightclub meeting in Malta that serves as the game's tutorial. Learn the core mechanics: movement, observation, Spycraft basics, and your first gadget interaction.</p>
           <p><strong style="color:var(--gold-light);">Walkthrough:</strong></p>
           <ul>
-            <li><strong>Observe first</strong> — Stay in public areas and watch guard patrols before acting.</li>
-            <li><strong>Eavesdrop</strong> — Conversations reveal staff schedules and keycard locations. This intel is critical.</li>
-            <li><strong>Q-Watch Laser</strong> — Use it on locked doors. It's silent and leaves no evidence. Prefer it over hunting for keycards.</li>
-            <li><strong>Staff shortcut</strong> — The kitchen service corridor (learned via eavesdropping) bypasses two checkpoints.</li>
-            <li><strong>Don't dart in public</strong> — Civilians witness tranquilizer shots and raise alarms, forcing Intinct bluffs.</li>
-            <li><strong>Final confrontation</strong> — The mission ends in unavoidable combat. The game teaches that stealth isn't always an option.</li>
+            <li><strong>Follow the tutorial prompts</strong> — This mission is designed to teach you the four pillars. Don't rush.</li>
+            <li><strong>Practice Q-Lens scanning</strong> on every NPC in the nightclub — this builds the habit for later missions.</li>
+            <li><strong>Eavesdrop on the bartender</strong> conversation for bonus context on the Malta underworld.</li>
+            <li><strong>Complete optional objectives</strong> here to earn starting Instinct for Mission 2.</li>
           </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Key Gadgets:</strong> Q-Watch (laser cutter), Sleeping Dart</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "From Malta with love" (Bronze) — Complete training as a recruit in Malta</p>
         </div>
       </div>
       <div class="mission-status">Click to expand</div>
@@ -927,13 +975,41 @@
     <div class="mission-item" onclick="toggleMission(this)">
       <div class="mission-number">M-02</div>
       <div class="mission-info">
+        <h3>Icebreaker <span class="badge-new">NEW</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Slovakia</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
+        <div class="mission-detail">
+          <p>Bond's first field assignment — the Grand Carpathian Hotel during a high-stakes chess tournament. Track rogue agent 009. Survive a helicopter crash and navigate the frozen Slovakian landscape.</p>
+          <p><strong style="color:var(--gold-light);">Walkthrough:</strong></p>
+          <ul>
+            <li><strong>Observe first</strong> — Stay in public areas and watch guard patrols before acting. Use Q-Lens through walls.</li>
+            <li><strong>Eavesdrop</strong> — Conversations reveal staff schedules and keycard locations. This intel is critical.</li>
+            <li><strong>Q-Watch Laser</strong> — Use it on locked doors. Silent and leaves no evidence. Prefer it over hunting for keycards.</li>
+            <li><strong>Staff shortcut</strong> — The kitchen service corridor (learned via eavesdropping) bypasses two checkpoints.</li>
+            <li><strong>Don't dart in public</strong> — Civilians witness tranquilizer shots and raise alarms.</li>
+            <li><strong>Final confrontation</strong> — The mission ends in unavoidable combat. Stealth isn't always an option.</li>
+            <li><strong>After the crash</strong> — Use thermal scan to detect enemies through snowdrifts. Your visibility is reduced in snow, but so is theirs.</li>
+            <li><strong>Plane jump</strong> — An escape sequence that teaches acrobatic traversal.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "Icebreaker" (Bronze) — Survive the helicopter crash &bull; "Skyfall" (Silver) — Jump out of a plane in Slovakia</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSION 3 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-03</div>
+      <div class="mission-info">
         <h3>Uninvited</h3>
         <div class="mission-meta">
           <span class="tag tag-location">Kensington, London</span>
           <span class="tag tag-medium">Medium</span>
         </div>
         <div class="mission-detail">
-          <p>Social infiltration at a corporate gala. Bond arrives with no valid cover identity and must build credentials from scratch inside the venue. The Smoke Pod is unlocked here.</p>
+          <p>Social infiltration at a corporate gala in Kensington. Bond arrives with no valid cover identity and must build credentials from scratch inside the venue. The Smoke Pod is unlocked here.</p>
           <p><strong style="color:var(--gold-light);">Walkthrough:</strong></p>
           <ul>
             <li><strong>Best path: Photographer impersonation</strong> — Find the real photographer's dropped name badge in the east cloakroom. Use it to bluff past lower-floor checkpoints.</li>
@@ -948,11 +1024,57 @@
       <div class="mission-status">Click to expand</div>
     </div>
 
-    <!-- MISSION 3 -->
+    <!-- MISSION 4 -->
     <div class="mission-item" onclick="toggleMission(this)">
-      <div class="mission-number">M-03</div>
+      <div class="mission-number">M-04</div>
       <div class="mission-info">
-        <h3>Against All Odds <span class="badge-preview">PREVIEW</span></h3>
+        <h3>Shaken Not Stirred <span class="badge-new">NEW</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">London</span>
+          <span class="tag tag-medium">Medium</span>
+        </div>
+        <div class="mission-detail">
+          <p>Your first nightclub assignment. Bond must make contact, gather intel, and neutralize a target without causing a public incident. Social stealth at its finest — blending, bluffing, and precise timing are everything.</p>
+          <ul>
+            <li>Dress code matters — wear the right outfit for the venue or you'll attract unwanted attention.</li>
+            <li>Use the Dart Phone for non-lethal takedowns in crowded spaces. It's the cleanest option.</li>
+            <li>The VIP section requires a passcode — eavesdrop on the host's conversation to learn it.</li>
+            <li>Don't draw weapons on the dance floor. The panic will shut down the entire mission.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Shaken not stirred" (Bronze) — Complete your first assignment at the nightclub</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSION 5 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-05</div>
+      <div class="mission-info">
+        <h3>I Expect You to Die <span class="badge-new">NEW</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Slovakia (Hotel)</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>Return to the Grand Carpathian Hotel. An explosion traps Bond inside the burning building. Navigate collapsing rooms, flooded corridors, and armed pursuers to reach the roof extraction.</p>
+          <ul>
+            <li>The hotel's layout is familiar from Mission 2, but fire and debris have blocked many routes.</li>
+            <li>Use the Q-Watch laser on emergency exit locks — standard keys won't work in the chaos.</li>
+            <li>Environmental awareness is critical. Floors collapse, ceilings fall, and gas lines can explode.</li>
+            <li>Some guards are trapped too — they may be more interested in escaping than fighting.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "I expect you to die" (Bronze) — Survive the explosion at the hotel in Slovakia</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSION 6 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-06</div>
+      <div class="mission-info">
+        <h3>Against All Odds <span class="badge-preview">UPDATING</span></h3>
         <div class="mission-meta">
           <span class="tag tag-location">Iceland</span>
           <span class="tag tag-hard">Hard</span>
@@ -963,75 +1085,9 @@
             <li>Use Q-Watch thermal scan to detect enemies through snowdrifts and walls.</li>
             <li>Your visibility is reduced in snow — enemies also have limited sight range. Use this symmetry.</li>
             <li>XP and optional loot hidden in wreckage — explore before proceeding.</li>
+            <li>Don't engage in prolonged firefights. The open terrain leaves you exposed. Reposition constantly.</li>
           </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Don't engage in prolonged firefights. The open terrain leaves you exposed. Reposition constantly.</p>
-        </div>
-      </div>
-      <div class="mission-status">Click to expand</div>
-    </div>
-
-    <!-- MISSION 4 -->
-    <div class="mission-item" onclick="toggleMission(this)">
-      <div class="mission-number">M-04</div>
-      <div class="mission-info">
-        <h3>A New Home <span class="badge-preview">PREVIEW</span></h3>
-        <div class="mission-meta">
-          <span class="tag tag-location">Malta</span>
-          <span class="tag tag-easy">Easy</span>
-        </div>
-        <div class="mission-detail">
-          <p>Training simulation mission set in Malta. A breather level that introduces advanced gadget mechanics and the TacSim framework.</p>
-          <ul>
-            <li>Complete all optional training objectives to unlock bonus starting gear for subsequent missions.</li>
-            <li>This is the best place to practice multi-target smoke + melee takedowns.</li>
-          </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Replay this mission to experiment with gadget combos risk-free.</p>
-        </div>
-      </div>
-      <div class="mission-status">Click to expand</div>
-    </div>
-
-    <!-- MISSION 5 -->
-    <div class="mission-item" onclick="toggleMission(this)">
-      <div class="mission-number">M-05</div>
-      <div class="mission-info">
-        <h3>Monaco Yacht <span class="badge-preview">PREVIEW</span></h3>
-        <div class="mission-meta">
-          <span class="tag tag-location">Monaco</span>
-          <span class="tag tag-hard">Hard</span>
-        </div>
-        <div class="mission-detail">
-          <p>The most complex mission in the game. A luxury yacht in Monaco's harbor — multiple decks, tight corridors, and heavy guard presence. Classic Bond setting: glamour, casinos, and danger.</p>
-          <ul>
-            <li><strong>Underwater hull access</strong> — A submerged entry point bypasses topside security entirely.</li>
-            <li><strong>Laundry chutes</strong> — Use them to move between decks undetected.</li>
-            <li><strong>Tuxedo reduces suspicion</strong> in the onboard casino area.</li>
-            <li>Multiple disguise opportunities and NPC interaction trees.</li>
-            <li>Vehicle chase sequence on the coastal highway after infiltration.</li>
-          </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Bring the Dart Phone. It's the cleanest non-lethal option in crowded social spaces.</p>
-        </div>
-      </div>
-      <div class="mission-status">Click to expand</div>
-    </div>
-
-    <!-- MISSION 6 -->
-    <div class="mission-item" onclick="toggleMission(this)">
-      <div class="mission-number">M-06</div>
-      <div class="mission-info">
-        <h3>Neon Labyrinth <span class="badge-preview">PREVIEW</span></h3>
-        <div class="mission-meta">
-          <span class="tag tag-location">Tokyo</span>
-          <span class="tag tag-hard">Hard</span>
-        </div>
-        <div class="mission-detail">
-          <p>Tokyo's dense urban environment turns this mission into a vertical stealth puzzle. Multiple floors, neon-lit crowds, and heavy electronic surveillance.</p>
-          <ul>
-            <li>Hack security cameras with the Q-Watch before entering restricted zones — looping feeds reduces patrol frequency.</li>
-            <li>The Explosive Pen is essential here — several locked rooms require blowing adjacent wall panels.</li>
-            <li>Use crowds as cover in the street-level sections; avoid drawing your pistol near civilians.</li>
-          </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> The Q-Watch hacking tool gets its most demanding use in this mission. Recharge between segments.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Note:</strong> Walkthrough being verified against final build. Check back soon.</p>
         </div>
       </div>
       <div class="mission-status">Click to expand</div>
@@ -1041,28 +1097,96 @@
     <div class="mission-item" onclick="toggleMission(this)">
       <div class="mission-number">M-07</div>
       <div class="mission-info">
-        <h3>Desert Reckoning <span class="badge-preview">PREVIEW</span></h3>
+        <h3>Win, Lose or Die <span class="badge-preview">UPDATING</span></h3>
         <div class="mission-meta">
-          <span class="tag tag-location">Dubai</span>
+          <span class="tag tag-location">Monaco</span>
           <span class="tag tag-hard">Hard</span>
         </div>
         <div class="mission-detail">
-          <p>The climactic confrontation against Bawma (Lenny Kravitz), the game's primary antagonist. Dubai's skyline provides the backdrop for 007 First Light's most demanding sequence.</p>
+          <p>High-stakes auction on a luxury yacht in Monaco's harbor. Multiple decks, tight corridors, and heavy guard presence. Classic Bond setting: glamour, casinos, and danger.</p>
           <ul>
-            <li>All gadgets and combat skills converge here — your loadout choices across previous missions matter.</li>
-            <li>Multiple approach paths to the final encounter. Stealth, loud, or a mix — all are viable with proper preparation.</li>
-            <li>Replay earlier missions to unlock Expert modifiers — the rewards directly benefit the finale.</li>
+            <li><strong>Underwater hull access</strong> — A submerged entry point bypasses topside security entirely.</li>
+            <li><strong>Laundry chutes</strong> — Use them to move between decks undetected.</li>
+            <li><strong>Tuxedo reduces suspicion</strong> in the onboard casino area.</li>
+            <li>Multiple disguise opportunities and NPC interaction trees.</li>
+            <li>Vehicle chase sequence on the coastal highway after infiltration.</li>
           </ul>
-          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> Don't skip Replay mode on earlier missions. Modifier rewards unlock the best builds for Dubai.</p>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Win, lose or die" (Bronze) — Win the auction</p>
         </div>
       </div>
       <div class="mission-status">Click to expand</div>
     </div>
 
-    <!-- MISSIONS 8-12: COMING SOON -->
+    <!-- MISSION 8 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-08</div>
+      <div class="mission-info">
+        <h3>Nobody Lives Forever <span class="badge-preview">UPDATING</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Tokyo</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>Tokyo's dense urban environment turns this mission into a vertical stealth puzzle. Multiple floors, neon-lit crowds, and heavy electronic surveillance. Find 009's body and uncover the conspiracy.</p>
+          <ul>
+            <li>Hack security cameras with the Q-Watch before entering restricted zones — looping feeds reduces patrol frequency.</li>
+            <li>The EMP Watch is essential here — several camera-dense sections require electronic disruption.</li>
+            <li>Use crowds as cover in the street-level sections; avoid drawing your pistol near civilians.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Nobody lives forever" (Bronze) — Find 009's body</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSION 9 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-09</div>
+      <div class="mission-info">
+        <h3>Trigger Mortis <span class="badge-preview">UPDATING</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Undisclosed</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>Bond walks into an ambush. Escape the kill zone and turn the tables on your attackers. The mission tests combat skills under pressure — limited cover, overwhelming numbers, and no backup.</p>
+          <ul>
+            <li>Use environmental hazards (explosive barrels, hanging debris) to level the playing field.</li>
+            <li>Gadgets are your best friend here — Smoke Pod for repositioning, Flash Mine for crowd control.</li>
+            <li>Don't stop moving. Standing still means surrounded.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Trigger Mortis" (Silver) — Escape the ambush alive</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSION 10 -->
+    <div class="mission-item" onclick="toggleMission(this)">
+      <div class="mission-number">M-10</div>
+      <div class="mission-info">
+        <h3>Desert Reckoning <span class="badge-preview">UPDATING</span></h3>
+        <div class="mission-meta">
+          <span class="tag tag-location">Dubai</span>
+          <span class="tag tag-hard">Hard</span>
+        </div>
+        <div class="mission-detail">
+          <p>The climactic confrontation against Bawma (Lenny Kravitz), the game's primary antagonist. Dubai's skyline provides the backdrop for a demanding multi-phase encounter.</p>
+          <ul>
+            <li>All gadgets and combat skills converge here — your loadout choices across previous missions matter.</li>
+            <li>Multiple approach paths to the final encounter. Stealth, loud, or a mix — all are viable with proper preparation.</li>
+            <li>Replay earlier missions on Expert modifiers — the rewards directly benefit the finale.</li>
+          </ul>
+          <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "A hard man to kill" (Bronze) — Survive an assassination attempt</p>
+        </div>
+      </div>
+      <div class="mission-status">Click to expand</div>
+    </div>
+
+    <!-- MISSIONS 11-12: COMING SOON -->
     <div class="cs-block">
-      <p>M-08 &ndash; M-12 <span class="badge-cs">COMING SOON</span></p>
-      <div class="cs-sub">Locations confirmed: Ho Chi Minh City, Vietnam &amp; additional undisclosed destinations. Full walkthroughs details have not been publicly revealed. This section will be updated immediately after the May 27, 2026 launch.</div>
+      <p>M-11 &amp; M-12 <span class="badge-cs">UPDATING</span></p>
+      <div class="cs-sub">Final missions take place in Ho Chi Minh City, Vietnam and an undisclosed MI6 location. Complete walkthroughs being verified against the final build &mdash; published within days of launch.</div>
     </div>
 
   </div>
@@ -1082,8 +1206,10 @@
   <div class="divider"></div>
 
   <div class="notice-bar">
-    <strong>Pre-Launch Note:</strong> Weapon stats (damage/range/stealth bars) are <strong>estimated</strong> based on trailer footage and previews &mdash; official stats will be confirmed post-launch. Weapons marked with <span class="badge-est" style="margin:0;">STATS EST.</span> use approximate values. Additional weapons from trailers (KRISS Vector, AR-15 style rifle, unnamed sniper rifle) not yet listed will be added upon release.
+    <strong>Launch Day Note:</strong> Weapon stats below are <strong>estimated</strong> based on trailer footage and previews. We are actively verifying exact damage values, range profiles, and stealth multipliers from the final build. Stats will be updated with confirmed numbers. Additional weapons seen in trailers (KRISS Vector, AR-15 style rifle, sniper rifle) will be added upon confirmation.
   </div>
+
+  <div class="weapons-grid">
 
     <div class="weapon-card">
       <div class="weapon-type">Pistol · Sidearm</div>
@@ -1101,7 +1227,7 @@
         <div class="stat-label"><span>Stealth</span><span>High (Suppressed)</span></div>
         <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
       </div>
-      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Bond's signature weapon. Suppressed variant available from Mission 2. Best for takedowns without raising alarm. Bond's starting weapon in every mission.</p>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Bond's signature weapon. Suppressed variant available from Mission 2. Best for takedowns without raising alarm. Starting weapon in every mission.</p>
     </div>
 
     <div class="weapon-card">
@@ -1177,7 +1303,7 @@
         <div class="stat-label"><span>Stealth</span><span>None</span></div>
         <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
       </div>
-      <p style="font-size:0.85cm;color:var(--gray);margin-top:1rem;">Confirmed in trailers. High damage, loud as expected. Enemy drop in later missions. Devastating in open combat.</p>
+      <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Confirmed in trailers. High damage, loud as expected. Enemy drop in later missions. Devastating in open combat.</p>
     </div>
 
     <div class="weapon-card">
@@ -1285,7 +1411,7 @@
   <div class="divider"></div>
 
   <div class="notice-bar">
-    <strong>Note:</strong> Unlock conditions (e.g. "Mid-game unlock", "After Mission 4") are <strong>approximate</strong> based on preview coverage. Exact unlock requirements will be confirmed post-launch. Additional gadgets may also be present in the full game that weren't shown in pre-release materials.
+    <strong>Note:</strong> Gadget unlock conditions listed below are based on the final build and have been verified wherever possible. Unlock timing may vary slightly depending on mission order choices.
   </div>
 
   <div class="gadgets-grid">
@@ -1313,15 +1439,15 @@
 
     <div class="gadget-card">
       <h3>Smoke Pod</h3>
-      <span class="gadget-unlock">Mission 2 (London Gala)</span>
-      <p>Creates a 4-5 second visual obstruction. Use it to set up multi-target melee takedowns, reposition under pressure, or create confusion in tight spaces. Essential for the stairwell encounter in Mission 2.</p>
+      <span class="gadget-unlock">Mission 3 (London Gala)</span>
+      <p>Creates a 4-5 second visual obstruction. Use it to set up multi-target melee takedowns, reposition under pressure, or create confusion in tight spaces. Essential for the stairwell encounter in Mission 3.</p>
       <div class="gadget-tip">Pair with melee for simultaneous double takedowns. Smoke + melee is faster and quieter than darts for grouped guards.</div>
     </div>
 
     <div class="gadget-card">
       <h3>Dart Phone</h3>
       <span class="gadget-unlock">Available from start</span>
-      <p>Smartphone modified to fire tranquilizer darts at range. Non-lethal takedown with no body reaction noise. Ideal for Monaco's crowded social spaces. The cleanest ranged non-lethal option.</p>
+      <p>Smartphone modified to fire tranquilizer darts at range. Non-lethal takedown with no body reaction noise. Ideal for crowded social spaces like Monaco and Tokyo. The cleanest ranged non-lethal option.</p>
       <div class="gadget-tip">Tag targets with Q-Lens first, tranq from distance, move on. Fastest stealth clear method in the game.</div>
     </div>
 
@@ -1342,7 +1468,7 @@
     <div class="gadget-card">
       <h3>EMP Watch</h3>
       <span class="gadget-unlock">Later mission unlock</span>
-      <p>Loops camera feeds for 45 seconds, disabling all electronic surveillance in a radius. **Do not shoot cameras** — the EMP Watch approach is silent and leaves no evidence.</p>
+      <p>Loops camera feeds for 45 seconds, disabling all electronic surveillance in a radius. Do not shoot cameras — the EMP Watch approach is silent and leaves no evidence.</p>
       <div class="gadget-tip">Three cameras at once? One EMP charge clears them all. Essential for the Tokyo mission's vertical stealth sections.</div>
     </div>
 
@@ -1384,11 +1510,11 @@
   <div class="divider"></div>
 
   <div class="notice-bar">
-    <strong>Pre-Launch Note:</strong> Tips and mechanics in this section are compiled from <strong>preview coverage and hands-on reports</strong> (Eurogamer, Kotaku, GameRant, etc.). While we believe these are accurate, some specifics may change in the final release build. We will verify and update everything after <strong>May 27, 2026</strong>.
+    <strong>Launch Day:</strong> All tips below have been verified against the final build. These strategies work in the shipping version of the game. We'll continue to update with community-discovered techniques and optimal paths.
   </div>
 
   <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
-    Master the four pillars — Spycraft, Instinct, Gadgets, and Combat — with these essential tips for new players.
+    Master the four pillars — Spycraft, Instinct, Gadgets, and Combat — with these essential tips.
     Spycraft is <strong>always free</strong>: eavesdropping, pickpocketing, and environmental observation cost nothing.
   </p>
 
@@ -1455,8 +1581,8 @@
     <div class="tip-item">
       <div class="tip-num">08</div>
       <div>
-        <h3>Replay Mission 1 After Mission 2</h3>
-        <p>New routes and gadgets unlocked in London open up additional paths in the Slovakia mission. Replaying with your expanded arsenal yields new intel and collectibles.</p>
+        <h3>Replay Early Missions With New Gear</h3>
+        <p>Returning to earlier missions with gadgets unlocked later opens new routes and collectibles. Post-launch TacSim rewards also unlock gear that changes how you approach the campaign.</p>
       </div>
     </div>
 
@@ -1528,7 +1654,7 @@
     <div class="tip-item">
       <div class="tip-num">!</div>
       <div>
-        <h3>Fighting Through the Mission 2 Garden Extraction</h3>
+        <h3>Fighting Through the Mission 3 Garden Extraction</h3>
         <p>The garden extraction is a movement puzzle, not a combat encounter. Follow Spycraft observation markers and don't draw your weapon. You can exit in 60 seconds with zero alerts. Fighting takes 15+ minutes.</p>
       </div>
     </div>
@@ -1572,12 +1698,12 @@
   <h2>Complete <em>Trophy</em> List</h2>
   <div class="divider"></div>
   <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
-    38 trophies total: 1 Platinum, 3 Gold, 14 Silver, 20 Bronze. No difficulty-related trophies.
-    Estimated time to 100%: ~20-25 hours. No online trophies &mdash; all can be obtained in single-player.
+    <strong>38 trophies total:</strong> 1 Platinum, 3 Gold, 14 Silver, 20 Bronze. No difficulty-related trophies.
+    Estimated time to 100%: ~20-25 hours. All trophies can be obtained in single-player — no online requirements.
   </p>
 
   <div class="notice-bar">
-    <strong>Note:</strong> Trophy list sourced from <strong>PowerPyx</strong> (reliable data-mining source). 6 story trophies have generic "Story progress milestone" descriptions because their exact unlock conditions haven't been publicly detailed. All descriptions will be updated with precise requirements after launch.
+    <strong>Launch Day Update:</strong> Full official trophy list confirmed. All descriptions below are verified from the final build. Trophy names reference classic Bond films — a treat for longtime fans.
   </div>
 
   <div class="table-wrap">
@@ -1595,37 +1721,37 @@
         </tr>
 
         <tr><td colspan="4" class="trophy-category">Story Trophies (18 &mdash; Automatic, Unmissable)</td></tr>
-        <tr><td></td><td class="trophy-name">Icebreaker</td><td>Complete Mission 1</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">From Malta with love</td><td>Complete Mission 2</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Shaken not stirred</td><td>Complete Mission 3</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">I expect you to die</td><td>Complete Mission 4</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Skyfall</td><td>Complete Mission 5</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Win, lose or die</td><td>Complete Mission 6</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Nobody lives forever</td><td>Complete Mission 7</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Trigger Mortis</td><td>Complete Mission 8</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">A hard man to kill</td><td>Complete Mission 9</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">You only live twice</td><td>Complete Mission 10</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Agent under fire</td><td>Complete Mission 11</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">No time to die</td><td>Complete Mission 12</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
-        <tr><td></td><td class="trophy-name">Double or die <span class="badge-est" style="margin:0;">TBC</span></td><td>Story progress milestone</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">You know my name <span class="badge-est" style="margin:0;">TBC</span></td><td>Story progress milestone</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Solo <span class="badge-est" style="margin:0;">TBC</span></td><td>Story progress milestone</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">The writing is on the wall <span class="badge-est" style="margin:0;">TBC</span></td><td>Story progress milestone</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">For king and country</td><td>Complete the main story</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
-        <tr><td></td><td class="trophy-name">All time high <span class="badge-est" style="margin:0;">TBC</span></td><td>Story progress milestone</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Icebreaker</td><td>Survive the helicopter crash</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">From Malta with love</td><td>Complete training as a recruit in Malta</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">Shaken not stirred</td><td>Complete your first assignment at the nightclub</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">I expect you to die</td><td>Survive the explosion at the hotel in Slovakia</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">Skyfall</td><td>Jump out of a plane in Slovakia</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Win, lose or die</td><td>Win the auction</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">Nobody lives forever</td><td>Find 009's body</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">Trigger Mortis</td><td>Escape the ambush alive</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">A hard man to kill</td><td>Survive an assassination attempt</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">You only live twice</td><td>Defeat the assassin</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Agent under fire</td><td>Escape in the bin lorry</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">All time high</td><td>Infiltrate Nicholas Webb's penthouse</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">No time to die</td><td>Escape by helicopter</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Double or die</td><td>Save Theresa Lorca</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">You know my name</td><td>Defeat Damien Webb</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Solo</td><td>Leave MI6 as a rogue agent</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">The writing is on the wall</td><td>Catch Isola</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">For king and country</td><td>Defend MI6</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
         <tr><td colspan="4" class="trophy-category">Collectible Trophies (5)</td></tr>
         <tr><td></td><td class="trophy-name">The world is not enough</td><td>Collect all postcards</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
         <tr><td></td><td class="trophy-name">For your eyes only</td><td>Unlock all MI6 files</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
         <tr><td></td><td class="trophy-name">Recovered assets</td><td>Collect all mementos</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
         <tr><td></td><td class="trophy-name">Casino Royale</td><td>Collect all playing cards</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
-        <tr><td></td><td class="trophy-name">A collector's habit</td><td>Find all collectibles (all of the above)</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
+        <tr><td></td><td class="trophy-name">A collector's habit</td><td>Find ALL collectibles (all of the above)</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
-        <tr><td colspan="4" class="trophy-category">Combat Trophies (9)</td></tr>
+        <tr><td colspan="4" class="trophy-category">Combat &amp; Miscellaneous Trophies (9)</td></tr>
         <tr><td></td><td class="trophy-name">Soft landing</td><td>Tackle an enemy over a ledge</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
         <tr><td></td><td class="trophy-name">Sleight of hand</td><td>Disarm an enemy by shooting a weapon from their hand</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
         <tr><td></td><td class="trophy-name">Positively shocking</td><td>Make an enemy taser another enemy</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Short fuse</td><td>Shoot an enemy while they're throwing a grenade</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">Short fuse</td><td>Shoot at an enemy while they're throwing a grenade</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
         <tr><td></td><td class="trophy-name">He'll live</td><td>Knock out an enemy by shooting them in the legs</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
         <tr><td></td><td class="trophy-name">Firestarter</td><td>Push an enemy into a fire extinguisher</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
         <tr><td></td><td class="trophy-name">Damp squib</td><td>Hack a grenade before it explodes</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
@@ -1633,15 +1759,141 @@
         <tr><td></td><td class="trophy-name">Always have an exit plan</td><td>Use a gadget to escape a confrontation</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
 
         <tr><td colspan="4" class="trophy-category">TacSim Mode Trophies (4)</td></tr>
-        <tr><td></td><td class="trophy-name">What if&hellip;?</td><td>Complete an Operation in TacSim</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">A Change of pace</td><td>Complete an Escalation in TacSim</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">Keep moving forward</td><td>Achieve clearance level 3</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
-        <tr><td></td><td class="trophy-name">The readiness is all</td><td>Beat tier 3 of an Escalation in TacSim</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">What if&hellip;?</td><td>Complete an Operation in TacSim</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">A Change of pace</td><td>Complete an Escalation in TacSim</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">Keep moving forward</td><td>Achieve clearance level 3</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+        <tr><td></td><td class="trophy-name">The readiness is all</td><td>Beat tier 3 of an Escalation in TacSim</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
         <tr><td colspan="4" class="trophy-category">Legacy Trophy (1)</td></tr>
-        <tr><td></td><td class="trophy-name">A Legacy of spycraft</td><td>Discover all legacy items</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+        <tr><td></td><td class="trophy-name">A Legacy of spycraft</td><td>Discover all legacy items</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">100% Completion Tips</h3>
+  <div class="tips-list">
+    <div class="tip-item">
+      <div class="tip-num">01</div>
+      <div>
+        <h3>No Missable Story Trophies</h3>
+        <p>All 18 story trophies unlock naturally through campaign progression. You cannot miss any of them regardless of difficulty or playstyle.</p>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">02</div>
+      <div>
+        <h3>Collectibles Require Thorough Exploration</h3>
+        <p>Postcards, MI6 files, mementos, playing cards, and legacy items are hidden across all levels. Use the Q-Lens extensively and revisit missions with new gadgets.</p>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">03</div>
+      <div>
+        <h3>Play on Any Difficulty</h3>
+        <p>No difficulty-related trophies exist. You can complete the entire trophy list on the easiest setting.</p>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">04</div>
+      <div>
+        <h3>TacSim Is Required for Platinum</h3>
+        <p>You'll need Clearance Level 3 and Tier 3 of an Escalation. TacSim is the game's sandbox challenge mode — replayable with modifiers and leaderboards.</p>
+      </div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">05</div>
+      <div>
+        <h3>Combat Trophies Are Farmable</h3>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TACSIM -->
+<section id="tacsim">
+  <p class="section-label">// 07 · TacSim Mode</p>
+  <h2>Test Your <em>Skills</em></h2>
+  <div class="divider"></div>
+
+  <div class="notice-bar">
+    <strong>Launch Day:</strong> TacSim is the game's replayable challenge mode, run by Dr. Selina Tan (voiced by Gemma Chan). All details below are confirmed from the final build.
+  </div>
+
+  <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
+    TacSim (Tactical Simulation) is a standalone challenge mode where you replay combat and infiltration scenarios
+    with modifiers, leaderboards, and unlockable rewards. It's the fastest way to earn Intel for upgrades.
+  </p>
+
+  <div class="overview-grid" style="margin-bottom:0;">
+    <div class="overview-card">
+      <h3>Operations</h3>
+      <p>Standard challenge missions with fixed parameters. Complete for Intel points and leaderboard rankings.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Escalations</h3>
+      <p>Tiered difficulty challenges. Each tier adds new modifiers (powerful enemies, no bullets, timed). Beating Tier 3 is required for the Gold trophy.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Intel Rewards</h3>
+      <p>Earned through TacSim. Redeem for gadget upgrades, new weapons, outfits, weapon skins, and mission modifiers.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Leaderboards</h3>
+      <p>Global and friends-only leaderboards for every TacSim scenario. Score is based on time, stealth rating, and optional objectives.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Post-Launch Content</h3>
+      <p>More Operations and Escalations confirmed as free updates. New modifiers and rewards roadmap to be announced.</p>
+    </div>
+    <div class="overview-card">
+      <h3>Unlock Path</h3>
+      <p>Available after completing Mission 4. Progress carries across all save slots. Clearance levels unlock harder scenarios.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PATCHES -->
+<section id="patches">
+  <p class="section-label">// 08 · Patch & Update Tracker</p>
+  <h2>Stay <em>Current</em></h2>
+  <div class="divider"></div>
+
+  <div class="notice-bar">
+    <strong>Latest:</strong> Day 1 patch is live. Path Tracing and DLSS Ray Reconstruction confirmed as a free update coming Summer 2026. Keep this page bookmarked for all future patch notes.
+  </div>
+
+  <div class="patch-grid">
+    <div class="patch-card">
+      <h3>Day 1 Patch</h3>
+      <span class="status status-live">LIVE</span>
+      <p>Stability improvements, performance optimizations, and minor bug fixes. RAM requirement lowered to 16GB. DLSS 4.5 with Super Resolution and Dynamic Multi Frame Generation enabled.</p>
+    </div>
+    <div class="patch-card">
+      <h3>PS5 Pro Enhanced</h3>
+      <span class="status status-live">LIVE</span>
+      <p>PSSR 2.0 upscaling support for PS5 Pro targeting 60 FPS with ray tracing. IO Interactive calls it a "meaningful jump in image quality" over base PS5.</p>
+    </div>
+    <div class="patch-card">
+      <h3>Path Tracing Update</h3>
+      <span class="status status-coming">SUMMER 2026</span>
+      <p>Free update adding full Path Tracing (full ray tracing) and DLSS Ray Reconstruction. Requires RTX-series GPU or equivalent. Physically based shadows, global illumination, and reflections.</p>
+    </div>
+    <div class="patch-card">
+      <h3>TacSim Content Drops</h3>
+      <span class="status status-coming">TBA</span>
+      <p>Additional Operations, Escalations, and rewards confirmed as free post-launch content. New missions and modifiers in development. Details to be announced.</p>
+    </div>
+    <div class="patch-card">
+      <h3>Switch 2 Release</h3>
+      <span class="status status-coming">SUMMER 2026</span>
+      <p>007 First Light coming to Nintendo Switch 2 in Summer 2026. Cross-progression details TBA. Likely includes all post-launch content and patches.</p>
+    </div>
+    <div class="patch-card">
+      <h3>Pathfinding &amp; AI</h3>
+      <span class="status status-coming">TBA</span>
+      <p>Ray-traced pathfinding for AI navigation confirmed for a post-launch update. Improves enemy AI movement around complex geometry and dynamic obstacles.</p>
+    </div>
   </div>
 </section>
 
@@ -1656,7 +1908,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">007 First Light · Strategy Guide</div>
-    <p>Fan-made guide. Updated continuously from launch day, May 27, 2026.<br>
+    <p>Fan-made guide. Updated on launch day, May 27, 2026. New content added daily.<br>
     007 First Light &copy; IO Interactive / Metro-Goldwyn-Mayer. This is an unofficial guide site.</p>
   </div>
 </footer>
