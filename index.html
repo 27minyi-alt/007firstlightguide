@@ -1,2510 +1,5019 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
 <link rel="apple-touch-icon" href="/favicon.svg">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta http-equiv="Cache-Control" content="max-age=86400">
+
 <title>007 First Light Guide – Missions, Weapons, Gadgets, Trophies & Walkthrough</title>
+
 <meta name="description" content="Complete guide for 007 First Light. Detailed mission walkthroughs, weapons database, Q-Branch gadgets, trophies/achievements, challenge guides, and expert tips for IO Interactive's James Bond origin story game.">
+
 <meta name="keywords" content="007 First Light guide, 007 First Light walkthrough, 007 First Light missions, 007 First Light weapons, 007 First Light trophies, James Bond game 2026, IO Interactive, 007 First Light challenges">
+
 <meta property="og:title" content="007 First Light Guide – Complete Walkthrough, Weapons & Trophies">
+
 <meta property="og:description" content="Complete guide for 007 First Light. Mission walkthroughs, safe codes, trophy guide, collectibles and tips.">
+
 <meta property="og:url" content="https://007firstlightguide.com/">
+
 <meta property="og:type" content="website">
+
 <meta name="twitter:card" content="summary_large_image">
+
 <meta name="twitter:title" content="007 First Light Guide">
+
 <meta name="twitter:description" content="Mission walkthroughs, safe codes, trophy guide and collectibles for 007 First Light.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+
   :root {
+
     --gold: #c9a84c;
+
     --gold-light: #e8c97a;
+
     --gold-dim: #7a6130;
+
     --black: #080808;
+
     --dark: #0f0f0f;
+
     --dark2: #161616;
+
     --dark3: #1e1e1e;
+
     --white: #f0ead8;
+
     --gray: #888;
+
     --red: #8b1a1a;
+
   }
+
+
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+
+
   html { scroll-behavior: smooth; }
 
+
+
   body {
+
     background: var(--black);
+
     color: var(--white);
+
     font-family: 'Cormorant Garamond', Georgia, serif;
+
     font-size: 18px;
+
     line-height: 1.7;
+
     overflow-x: hidden;
+
   }
+
+
 
   body::before {
+
     content: '';
+
     position: fixed;
+
     inset: 0;
+
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+
     pointer-events: none;
+
     z-index: 1000;
+
     opacity: 0.4;
+
   }
+
+
 
   header {
+
     position: relative;
+
     min-height: 100vh;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
     overflow: hidden;
+
     padding: 2rem;
+
   }
+
+
 
   .header-bg {
+
     position: absolute;
+
     inset: 0;
+
     background:
+
       radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%),
+
       radial-gradient(ellipse 40% 80% at 20% 50%, rgba(139,26,26,0.12) 0%, transparent 60%),
+
       linear-gradient(180deg, #080808 0%, #0d0a05 50%, #080808 100%);
+
   }
+
+
 
   .header-lines {
+
     position: absolute;
+
     inset: 0;
+
     background-image:
+
       repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px),
+
       repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px);
+
   }
+
+
 
   .gun-barrel {
+
     position: absolute;
+
     top: 0; left: 50%;
+
     transform: translateX(-50%);
+
     width: 2px;
+
     height: 100%;
+
     background: linear-gradient(180deg, transparent, rgba(201,168,76,0.4) 40%, rgba(201,168,76,0.1) 60%, transparent);
+
     animation: barrel-pulse 4s ease-in-out infinite;
+
   }
+
+
 
   @keyframes barrel-pulse {
+
     0%, 100% { opacity: 0.3; }
+
     50% { opacity: 1; }
+
   }
+
+
 
   .header-content {
+
     position: relative;
+
     z-index: 2;
+
     animation: fade-up 1.2s ease both;
+
   }
+
+
 
   @keyframes fade-up {
+
     from { opacity: 0; transform: translateY(30px); }
+
     to { opacity: 1; transform: translateY(0); }
+
   }
+
+
 
   .eyebrow {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.4em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 1.5rem;
+
     opacity: 0.8;
+
   }
+
+
 
   h1 {
+
     font-size: clamp(3rem, 8vw, 7rem);
+
     font-weight: 300;
+
     letter-spacing: 0.05em;
+
     line-height: 1;
+
     margin-bottom: 0.2em;
+
   }
+
+
 
   h1 .number {
+
     color: var(--gold);
+
     font-weight: 700;
+
   }
+
+
 
   h1 .subtitle {
+
     display: block;
+
     font-size: 0.35em;
+
     font-family: 'DM Mono', monospace;
+
     letter-spacing: 0.3em;
+
     color: var(--gold-dim);
+
     font-weight: 300;
+
     margin-top: 0.5em;
+
   }
+
+
 
   .tagline {
+
     font-size: 1rem;
+
     color: var(--gray);
+
     letter-spacing: 0.1em;
+
     margin-top: 2rem;
+
     font-style: italic;
+
   }
+
+
 
   .release-badge {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
     margin-top: 2.5rem;
+
     padding: 0.6rem 1.5rem;
+
     border: 1px solid var(--gold-dim);
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold);
+
     background: rgba(201,168,76,0.05);
+
     text-transform: uppercase;
+
   }
+
+
 
   .release-badge::before {
+
     content: '\25CF';
+
     color: #5a9a5a;
+
     animation: blink 1.5s ease-in-out infinite;
+
   }
+
+
 
   @keyframes blink {
+
     0%, 100% { opacity: 1; }
+
     50% { opacity: 0.2; }
+
   }
+
+
 
   .scroll-hint {
+
     position: absolute;
+
     bottom: 2rem;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.3em;
+
     color: var(--gold-dim);
+
     text-transform: uppercase;
+
     animation: float 2s ease-in-out infinite;
+
   }
+
+
 
   @keyframes float {
+
     0%, 100% { transform: translateX(-50%) translateY(0); }
+
     50% { transform: translateX(-50%) translateY(8px); }
+
   }
+
+
 
   nav {
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
     background: rgba(8,8,8,0.95);
+
     backdrop-filter: blur(20px);
+
     border-bottom: 1px solid rgba(201,168,76,0.15);
+
     padding: 0 2rem;
+
   }
+
+
 
   .nav-inner {
+
     max-width: 1100px;
+
     margin: 0 auto;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     height: 56px;
+
   }
+
+
 
   .nav-logo {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.3em;
+
     color: var(--gold);
+
     text-decoration: none;
+
     text-transform: uppercase;
+
   }
+
+
 
   .nav-links {
+
     display: flex;
+
     gap: 1.2rem;
+
     list-style: none;
+
   }
 
+
+
   .nav-links a {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gray);
+
     text-decoration: none;
+
     text-transform: uppercase;
+
     transition: color 0.2s;
+
   }
+
+
 
   .nav-links a:hover { color: var(--gold); }
 
+
+
   section {
+
     max-width: 1100px;
+
     margin: 0 auto;
+
     padding: 5rem 2rem;
+
   }
+
+
 
   .section-label {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.4em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 1rem;
+
     opacity: 0.7;
+
   }
+
+
 
   h2 {
+
     font-size: clamp(2rem, 4vw, 3rem);
+
     font-weight: 300;
+
     letter-spacing: 0.03em;
+
     margin-bottom: 3rem;
+
     line-height: 1.1;
+
   }
+
+
 
   h2 em {
+
     font-style: italic;
+
     color: var(--gold);
+
   }
+
+
 
   .divider {
+
     width: 60px;
+
     height: 1px;
+
     background: linear-gradient(90deg, var(--gold), transparent);
+
     margin: 1.5rem 0 3rem;
+
   }
+
+
 
   .overview-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 1px;
+
     background: rgba(201,168,76,0.1);
+
     border: 1px solid rgba(201,168,76,0.1);
+
     margin-bottom: 3rem;
+
   }
 
+
+
   .overview-card {
+
     background: var(--dark);
+
     padding: 2rem;
+
     transition: background 0.3s;
+
   }
+
+
 
   .overview-card:hover { background: var(--dark2); }
 
+
+
   .overview-card .icon {
+
     font-size: 1.5rem;
+
     margin-bottom: 0.8rem;
+
   }
+
+
 
   .overview-card h3 {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.25em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 0.5rem;
+
   }
+
+
 
   .overview-card p {
+
     font-size: 0.95rem;
+
     color: var(--gray);
+
     line-height: 1.5;
+
   }
+
+
 
   .missions-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1px;
+
     background: rgba(201,168,76,0.08);
+
   }
+
+
 
   .mission-item {
+
     background: var(--dark);
+
     padding: 1.8rem 2rem;
+
     display: grid;
+
     grid-template-columns: auto 1fr auto;
+
     gap: 1.5rem;
+
     align-items: start;
+
     cursor: pointer;
+
     transition: background 0.2s;
+
     border-left: 2px solid transparent;
+
   }
+
+
 
   .mission-item:hover {
+
     background: var(--dark2);
+
     border-left-color: var(--gold);
+
   }
+
+
 
   .mission-number {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     color: var(--gold-dim);
+
     letter-spacing: 0.1em;
+
     padding-top: 0.3rem;
+
     min-width: 2.5rem;
+
   }
+
+
 
   .mission-info h3 {
+
     font-size: 1.2rem;
+
     font-weight: 400;
+
     margin-bottom: 0.3rem;
+
   }
+
+
 
   .mission-meta {
+
     display: flex;
+
     gap: 1rem;
+
     flex-wrap: wrap;
+
   }
+
+
 
   .tag {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.15em;
+
     text-transform: uppercase;
+
     padding: 0.2rem 0.6rem;
+
     border: 1px solid;
+
   }
+
+
 
   .tag-location { color: var(--gray); border-color: rgba(136,136,136,0.3); }
+
   .tag-easy { color: #5a9a5a; border-color: rgba(90,154,90,0.3); }
+
   .tag-medium { color: var(--gold); border-color: rgba(201,168,76,0.3); }
+
   .tag-hard { color: #c87a3a; border-color: rgba(200,122,58,0.3); }
+
   .tag-verified { color: #5a9a5a; border-color: rgba(90,154,90,0.3); }
 
+
+
   .mission-status {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     color: var(--gold-dim);
+
     letter-spacing: 0.1em;
+
     text-transform: uppercase;
+
     padding-top: 0.3rem;
+
     white-space: nowrap;
+
   }
+
+
 
   .mission-detail {
+
     display: none;
+
     grid-column: 2 / -1;
+
     margin-top: 1rem;
+
     padding-top: 1rem;
+
     border-top: 1px solid rgba(201,168,76,0.1);
+
     font-size: 0.95rem;
+
     color: var(--gray);
+
     line-height: 1.7;
+
   }
+
+
 
   .mission-item.open .mission-detail { display: block; }
+
   .mission-item.open { border-left-color: var(--gold); background: var(--dark2); }
 
+
+
   .mission-detail ul {
+
     margin: 0.5rem 0 0.5rem 1.2rem;
+
   }
+
+
 
   .mission-detail li {
+
     margin-bottom: 0.3rem;
+
   }
+
+
 
   .challenge-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
     gap: 1px;
+
     background: rgba(201,168,76,0.06);
+
     margin: 1rem 0;
+
   }
+
+
 
   .challenge-item {
+
     background: var(--dark3);
+
     padding: 0.8rem 1rem;
+
     font-size: 0.85rem;
+
   }
+
+
 
   .challenge-item strong {
+
     color: var(--gold-light);
+
     font-size: 0.8rem;
+
   }
+
+
 
   .challenge-item p {
+
     font-size: 0.8rem;
+
     color: var(--gray);
+
     margin-top: 0.3rem;
+
   }
+
+
 
   .puzzle-box {
+
     background: var(--dark3);
+
     border: 1px solid rgba(201,168,76,0.15);
+
     border-left: 3px solid var(--gold);
+
     padding: 1.2rem 1.5rem;
+
     margin: 1rem 0;
+
     font-size: 0.9rem;
+
   }
+
+
 
   .puzzle-box strong {
+
     color: var(--gold-light);
+
   }
+
+
 
   .puzzle-code {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 1.2rem;
+
     letter-spacing: 0.3em;
+
     color: var(--gold-light);
+
   }
+
+
 
   .weapons-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
     gap: 1px;
+
     background: rgba(201,168,76,0.08);
+
   }
 
+
+
   .weapon-card {
+
     background: var(--dark);
+
     padding: 1.8rem;
+
     transition: background 0.2s;
+
   }
+
+
 
   .weapon-card:hover { background: var(--dark2); }
 
+
+
   .weapon-type {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold-dim);
+
     text-transform: uppercase;
+
     margin-bottom: 0.5rem;
+
   }
+
+
 
   .weapon-card h3 {
+
     font-size: 1.2rem;
+
     font-weight: 400;
+
     margin-bottom: 0.25rem;
+
   }
+
+
 
   .weapon-sub {
+
     font-size: 0.8rem;
+
     color: var(--gray);
+
     font-style: italic;
+
     margin-bottom: 1rem;
+
     display: block;
+
   }
+
+
 
   .stat-bar {
+
     margin-bottom: 0.6rem;
+
   }
+
+
 
   .stat-label {
+
     display: flex;
+
     justify-content: space-between;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.1em;
+
     color: var(--gray);
+
     text-transform: uppercase;
+
     margin-bottom: 0.3rem;
+
   }
+
+
 
   .bar-track {
+
     height: 2px;
+
     background: rgba(255,255,255,0.08);
+
     position: relative;
+
     overflow: hidden;
+
   }
+
+
 
   .bar-fill {
+
     height: 100%;
+
     background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+
     transition: width 1s ease;
+
   }
+
+
 
   .gadgets-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
     gap: 2rem;
+
   }
+
+
 
   .gadget-card {
+
     border: 1px solid rgba(201,168,76,0.15);
+
     padding: 2rem;
+
     position: relative;
+
     overflow: hidden;
+
     transition: border-color 0.3s;
+
   }
+
+
 
   .gadget-card::before {
+
     content: '';
+
     position: absolute;
+
     top: 0; left: 0;
+
     width: 100%; height: 2px;
+
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
+
     transform: translateX(-100%);
+
     transition: transform 0.5s;
+
   }
+
+
 
   .gadget-card:hover { border-color: rgba(201,168,76,0.4); }
+
   .gadget-card:hover::before { transform: translateX(100%); }
 
+
+
   .gadget-card h3 {
+
     font-size: 1.1rem;
+
     font-weight: 600;
+
     color: var(--gold-light);
+
     margin-bottom: 0.3rem;
+
   }
+
+
 
   .gadget-unlock {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.15em;
+
     color: var(--gold-dim);
+
     text-transform: uppercase;
+
     margin-bottom: 0.8rem;
+
     display: block;
+
   }
+
+
 
   .gadget-card p {
+
     font-size: 0.9rem;
+
     color: var(--gray);
+
     line-height: 1.6;
+
   }
+
+
 
   .gadget-tip {
+
     margin-top: 1rem;
+
     padding: 0.8rem;
+
     background: rgba(201,168,76,0.05);
+
     border-left: 2px solid var(--gold-dim);
+
     font-size: 0.85rem;
+
     color: var(--white);
+
     font-style: italic;
+
   }
+
+
 
   .tips-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
+
   }
 
+
+
   .tip-item {
+
     display: grid;
+
     grid-template-columns: 3rem 1fr;
+
     gap: 1.5rem;
+
     align-items: start;
+
     padding: 1.5rem;
+
     background: var(--dark);
+
     border: 1px solid rgba(201,168,76,0.08);
+
     transition: border-color 0.2s;
+
   }
+
+
 
   .tip-item:hover { border-color: rgba(201,168,76,0.25); }
 
+
+
   .tip-num {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 1.8rem;
+
     color: rgba(201,168,76,0.2);
+
     font-weight: 300;
+
     line-height: 1;
+
   }
+
+
 
   .tip-item h3 {
+
     font-size: 1rem;
+
     font-weight: 600;
+
     color: var(--gold-light);
+
     margin-bottom: 0.4rem;
+
   }
+
+
 
   .tip-item p {
+
     font-size: 0.9rem;
+
     color: var(--gray);
+
     line-height: 1.6;
+
   }
+
+
 
   .trophy-table {
+
     width: 100%;
+
     border-collapse: collapse;
+
     border: 1px solid rgba(201,168,76,0.1);
+
     font-size: 0.9rem;
+
     margin-bottom: 2rem;
+
   }
+
+
 
   .trophy-table th {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.2em;
+
     text-transform: uppercase;
+
     color: var(--gold);
+
     background: var(--dark);
+
     padding: 1rem;
+
     text-align: left;
+
     border-bottom: 1px solid rgba(201,168,76,0.15);
+
   }
+
+
 
   .trophy-table td {
+
     padding: 0.8rem 1rem;
+
     border-bottom: 1px solid rgba(201,168,76,0.05);
+
     color: var(--gray);
+
     vertical-align: top;
+
   }
+
+
 
   .trophy-table tr:hover td {
+
     background: var(--dark2);
+
   }
+
+
 
   .trophy-rarity {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.1em;
+
     white-space: nowrap;
+
   }
+
+
 
   .trophy-plat { color: #b09a6a; }
+
   .trophy-gold { color: #c9a84c; }
+
   .trophy-silver { color: #9ea8b0; }
+
   .trophy-bronze { color: #b06a3a; }
 
+
+
   .trophy-category {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     padding: 1.2rem 1rem 0.5rem;
+
     background: var(--dark);
+
     border-bottom: 1px solid rgba(201,168,76,0.1);
+
   }
+
   .trophy-category td { color: var(--gold-light); }
 
+
+
   .trophy-name {
+
     color: var(--white);
+
     font-weight: 600;
+
   }
+
+
 
   .table-wrap {
+
     overflow-x: auto;
+
   }
+
+
 
   .tree-box {
+
     background: var(--dark);
+
     border: 1px solid rgba(201,168,76,0.12);
+
     padding: 2rem;
+
     margin: 1.5rem 0;
+
     font-size: 0.9rem;
+
     color: var(--gray);
+
     line-height: 2;
+
   }
+
+
 
   .tree-box span.arrow {
+
     color: var(--gold-dim);
+
     margin: 0 0.5rem;
+
   }
+
+
 
   .tree-box .branch {
+
     display: block;
+
     padding-left: 1.5rem;
+
     border-left: 1px solid rgba(201,168,76,0.1);
+
     margin: 0.3rem 0 0.3rem 1.5rem;
+
   }
+
+
 
   .badge-cs {
+
     display: inline-block;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.55rem;
+
     letter-spacing: 0.15em;
+
     text-transform: uppercase;
+
     padding: 0.15rem 0.5rem;
+
     border: 1px solid var(--gold-dim);
+
     color: var(--gold-dim);
+
     background: rgba(201,168,76,0.06);
+
     margin-left: 0.5rem;
+
     vertical-align: middle;
+
   }
+
+
 
   .badge-new {
+
     display: inline-block;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.5rem;
+
     letter-spacing: 0.12em;
+
     text-transform: uppercase;
+
     padding: 0.12rem 0.4rem;
+
     border: 1px solid rgba(90,154,90,0.4);
+
     color: #5a9a5a;
+
     background: rgba(90,154,90,0.06);
+
     margin-left: 0.5rem;
+
     vertical-align: middle;
+
   }
+
+
 
   .badge-verified {
+
     display: inline-block;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.5rem;
+
     letter-spacing: 0.12em;
+
     text-transform: uppercase;
+
     padding: 0.12rem 0.4rem;
+
     border: 1px solid rgba(90,154,90,0.4);
+
     color: #5a9a5a;
+
     background: rgba(90,154,90,0.06);
+
     margin-left: 0.5rem;
+
     vertical-align: middle;
+
   }
+
+
 
   .badge-updated {
+
     display: inline-block;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.5rem;
+
     letter-spacing: 0.12em;
+
     text-transform: uppercase;
+
     padding: 0.12rem 0.4rem;
+
     border: 1px solid rgba(200,122,58,0.4);
+
     color: #c87a3a;
+
     background: rgba(200,122,58,0.06);
+
     margin-left: 0.5rem;
+
     vertical-align: middle;
+
   }
+
+
 
   .notice-bar {
+
     background: rgba(201,168,76,0.06);
+
     border: 1px solid rgba(201,168,76,0.15);
+
     border-left: 3px solid var(--gold-dim);
+
     padding: 1rem 1.5rem;
+
     margin-bottom: 2rem;
+
     font-size: 0.85rem;
+
     color: var(--gray);
+
     line-height: 1.6;
+
   }
+
+
 
   .notice-bar strong {
+
     color: var(--gold-light);
+
   }
+
+
 
   .cs-block {
+
     background: rgba(201,168,76,0.03);
+
     border: 1px dashed rgba(201,168,76,0.15);
+
     padding: 2.5rem 2rem;
+
     text-align: center;
+
     margin: 1px 0;
+
   }
+
+
 
   .cs-block p {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold-dim);
+
     text-transform: uppercase;
+
   }
+
+
 
   .cs-block .cs-sub {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 0.9rem;
+
     font-style: italic;
+
     color: var(--gray);
+
     text-transform: none;
+
     letter-spacing: 0;
+
     margin-top: 0.3rem;
+
   }
+
+
 
   .ad-banner {
+
     background: var(--dark2);
+
     border: 1px dashed rgba(201,168,76,0.2);
+
     padding: 2rem;
+
     text-align: center;
+
     margin: 3rem 0;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold-dim);
+
     text-transform: uppercase;
+
   }
+
+
 
   footer {
+
     border-top: 1px solid rgba(201,168,76,0.1);
+
     padding: 3rem 2rem;
+
     text-align: center;
+
   }
+
+
 
   .footer-inner {
+
     max-width: 1100px;
+
     margin: 0 auto;
+
   }
+
+
 
   .footer-logo {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.7rem;
+
     letter-spacing: 0.4em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 1rem;
+
   }
+
+
 
   footer p {
+
     font-size: 0.8rem;
+
     color: var(--gold-dim);
+
     line-height: 1.6;
+
   }
+
+
 
   .adsense-slot {
+
     display: block;
+
     min-height: 90px;
+
     background: var(--dark2);
+
     border: 1px dashed rgba(201,168,76,0.15);
+
     margin: 2rem 0;
+
   }
+
+
 
   .patch-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
     gap: 1px;
+
     background: rgba(201,168,76,0.08);
+
     margin-bottom: 2rem;
+
   }
 
+
+
   .patch-card {
+
     background: var(--dark);
+
     padding: 1.5rem;
+
   }
+
+
 
   .patch-card:hover { background: var(--dark2); }
 
+
+
   .patch-card h3 {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 0.5rem;
+
   }
+
+
 
   .patch-card .status {
+
     display: inline-block;
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.55rem;
+
     letter-spacing: 0.12em;
+
     text-transform: uppercase;
+
     padding: 0.1rem 0.4rem;
+
     margin-bottom: 0.8rem;
+
   }
+
+
 
   .status-live { color: #5a9a5a; border: 1px solid rgba(90,154,90,0.3); }
+
   .status-coming { color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
 
+
+
   .patch-card p {
+
     font-size: 0.85rem;
+
     color: var(--gray);
+
     line-height: 1.5;
+
   }
+
+
 
   .secrets-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
     gap: 1rem;
+
     margin: 1.5rem 0;
+
   }
 
+
+
   .secret-card {
+
     background: var(--dark);
+
     border: 1px solid rgba(201,168,76,0.08);
+
     padding: 1.5rem;
+
     transition: border-color 0.2s;
+
   }
+
+
 
   .secret-card:hover { border-color: rgba(201,168,76,0.25); }
 
+
+
   .secret-card h4 {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.65rem;
+
     letter-spacing: 0.2em;
+
     color: var(--gold);
+
     text-transform: uppercase;
+
     margin-bottom: 0.5rem;
+
   }
+
+
 
   .secret-card p {
+
     font-size: 0.85rem;
+
     color: var(--gray);
+
     line-height: 1.5;
+
   }
+
+
 
   .mission-screenshot {
+
     width: 100%;
+
     max-width: 800px;
+
     border: 1px solid rgba(201,168,76,0.25);
+
     margin: 1rem 0;
+
     display: block;
+
     border-radius: 2px;
+
     transition: border-color 0.3s, filter 0.3s;
+
   }
+
+
 
   .mission-screenshot:hover {
+
     border-color: var(--gold);
+
     filter: brightness(1.05);
+
   }
+
+
 
   .screenshot-caption {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.15em;
+
     color: var(--gold-dim);
+
     margin-top: -0.5rem;
+
     margin-bottom: 1.5rem;
+
     font-style: italic;
+
   }
+
+
 
   .hero-image {
+
     width: 100%;
+
     max-width: 1000px;
+
     border: 1px solid rgba(201,168,76,0.2);
+
     margin: 2rem 0;
+
     display: block;
+
     border-radius: 2px;
+
   }
+
+
 
   .hero-caption {
+
     font-family: 'DM Mono', monospace;
+
     font-size: 0.6rem;
+
     letter-spacing: 0.15em;
+
     color: var(--gold-dim);
+
     margin-top: -1.5rem;
+
     margin-bottom: 2.5rem;
+
     font-style: italic;
+
     text-align: center;
+
   }
+
+
 
   @media (max-width: 640px) {
+
     .nav-links { display: none; }
+
     .mission-item { grid-template-columns: auto 1fr; }
+
     .mission-status { display: none; }
+
   }
+
 </style>
+
 </head>
+
 <body>
 
+
+
 <!-- HERO -->
+
 <header>
+
   <div class="header-bg"></div>
+
   <div class="header-lines"></div>
+
   <div class="gun-barrel"></div>
+
   <div class="header-content">
+
     <p class="eyebrow">Complete Strategy Guide</p>
+
     <h1>
+
       <span class="number">007</span> First Light
+
       <span class="subtitle">Mission Walkthroughs · Weapons · Gadgets · Trophies</span>
+
     </h1>
+
     <p class="tagline">Earn the number. Master the mission.</p>
+
     <div class="release-badge">Now Available · PS5 · PC · Xbox Series X/S</div>
+
   </div>
+
   <div class="scroll-hint">Scroll to Begin</div>
+
 </header>
 
+
+
 <!-- NAV -->
+
 <nav>
+
   <div class="nav-inner">
+
     <a href="#" class="nav-logo">007 First Light · Guide</a>
+
     <ul class="nav-links">
+
       <li><a href="#overview">Overview</a></li>
+
       <li><a href="#missions">Missions</a></li>
+
       <li><a href="#weapons">Weapons</a></li>
+
       <li><a href="#gadgets">Gadgets</a></li>
+
       <li><a href="#beginners">Beginners</a></li>
+
       <li><a href="#trophies">Trophies</a></li>
+
       <li><a href="#secrets">Secrets</a></li>
+
       <li><a href="#patches">Patches</a></li>
+
     </ul>
+
   </div>
+
 </nav>
 
+
+
 <!-- ADSENSE TOP -->
+
 <div style="max-width:1100px;margin:0 auto;padding:1rem 2rem;">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3330668693509117" crossorigin="anonymous"></script>
+
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3330668693509117" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 </div>
 
+
+
 <!-- OVERVIEW -->
+
 <section id="overview">
+
   <p class="section-label">// 01 · Game Overview</p>
+
   <h2>Become <em>Bond</em></h2>
+
   <div class="divider"></div>
+
   <p style="color:var(--gray);max-width:680px;margin-bottom:2.5rem;font-size:1rem;">
+
     007 First Light is James Bond's origin story — developed by IO Interactive (Hitman series).
+
     You play as 26-year-old James Bond, voiced and performed by Patrick Gibson, before he earns his 00 status.
+
     Spanning 17 chapters across the globe, the game blends social stealth, gadget-based infiltration,
+
     and explosive action. Expect ~20 hours for the main story, up to 40 with extras and TacSim mode.
+
   </p>
+
   <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3768760/dbe86ebd2edb4c77d113e9e2feefeb90189fabc9/header_alt_assets_1.jpg?t=1779804342" alt="007 First Light official key art" class="hero-image" loading="lazy">
+
   <p class="hero-caption">Official key art for 007 First Light — IO Interactive's James Bond origin story</p>
+
   <div class="overview-grid">
+
     <div class="overview-card">
+
       <div class="icon">&#127918;</div>
+
       <h3>Developer</h3>
+
       <p>IO Interactive — creators of the Hitman: World of Assassination trilogy</p>
+
     </div>
+
     <div class="overview-card">
+
       <div class="icon">&#128197;</div>
+
       <h3>Release Date</h3>
+
       <p>May 27, 2026 · PS5, Xbox Series X/S, PC · Switch 2 Summer 2026</p>
+
     </div>
+
     <div class="overview-card">
+
       <div class="icon">&#127758;</div>
+
       <h3>Locations</h3>
+
       <p>Iceland · Malta · London · Slovakia · MI6 · Mauritania · Monaco · Tokyo · Vietnam · Antarctica</p>
+
     </div>
+
     <div class="overview-card">
+
       <div class="icon">&#128373;</div>
+
       <h3>Playstyle</h3>
+
       <p>Four pillars: Spycraft, Instinct, Gadgets, Combat — choose your approach</p>
+
     </div>
+
     <div class="overview-card">
+
       <div class="icon">&#127917;</div>
+
       <h3>Cast</h3>
+
       <p>Patrick Gibson (Bond), Lenny Kravitz (Bawma), Hannah Waddingham (M), Gemma Chan (Dr. Tan)</p>
+
     </div>
+
     <div class="overview-card">
+
       <div class="icon">&#127942;</div>
+
       <h3>Replay Value</h3>
+
       <p>17 chapters with multiple paths + TacSim sandbox + leaderboards + post-launch content</p>
+
     </div>
+
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2rem 0 1rem;">Key Stats at a Glance</h3>
+
   <div class="overview-grid">
+
     <div class="overview-card">
+
       <h3>Install Size</h3>
+
       <p>~51 GB on PS5, ~55 GB on Xbox, ~80 GB on PC (Day 1 patch v1.006 ~25 GB)</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Day 1 Patch</h3>
+
       <p>v1.006, ~25 GB on PS5. Required for full game — disc contains only the prologue. v1.007 hotfix now live.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Trophies</h3>
+
       <p>38 total (1 Platinum). No difficulty-locked trophies. ~20 hrs to 100%.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>PC Specs</h3>
+
       <p>16 GB RAM across all tiers. DLSS 4.5 + Dynamic MFG. No FSR 4 support at launch. Path tracing + DLSS Ray Reconstruction coming Summer 2026. AMD users: OptiScaler 0.9.2a works as an alternative (tested on RX 9070 XT).</p>
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <!-- MISSIONS -->
+
 <section id="missions">
+
   <p class="section-label">// 02 · Mission Walkthroughs</p>
+
   <h2>Every <em>Mission</em>, Every Secret</h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> The game is <strong>now available</strong> worldwide. All walkthroughs below have been verified against the final retail build. We will continue refining guides with community-discovered strategies. Puzzle solutions, challenge checklists, and hidden routes are included for every chapter.
+
   </div>
+
+
 
   <div class="missions-list">
 
+
+
     <!-- PROLOGUE: Against the Odds -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">P-01</div>
+
       <div class="mission-info">
+
         <h3>Against the Odds <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Iceland</span>
+
           <span class="tag tag-easy">Easy</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>The prologue. Bond's helicopter crashes in the Icelandic wilderness after a routine transport goes wrong. A survival-focused mission that teaches basic movement, environmental awareness, and the game's approach to semi-linear action sequences.</p>
+
           <ul>
+
             <li><strong>Follow the wreckage trail</strong> — XP and consumable loot are scattered along the crash path.</li>
+
             <li><strong>Thermal scan</strong> — Use the Q-Watch to detect enemies through snowdrifts and blizzard conditions.</li>
+
             <li><strong>Limited engagement</strong> — Resources are scarce. Conserve ammo and avoid extended firefights.</li>
+
             <li><strong>Visibility works both ways</strong> — Snow reduces enemy sight range, just like yours. Use it to reposition.</li>
+
             <li><strong>Final sequence</strong> — A scripted combat encounter before extraction. Use the environment for cover.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> None — the prologue is pre-title</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/7683959b09f7863c5eb23bfdbcf039269765b5d6/ss_7683959b09f7863c5eb23bfdbcf039269765b5d6.1920x1080.jpg?t=1779804342" alt="007 First Light Prologue — Iceland helicopter crash and snowy wilderness" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Iceland — Bond's helicopter crashes in the frozen wilderness during the prologue</p>
+
         </div>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 1: The Needle's Eye -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-1</div>
+
       <div class="mission-info">
+
         <h3>The Needle's Eye <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Malta</span>
+
           <span class="tag tag-easy">Easy</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond's first assignment after being recruited by MI6. A nightclub meeting in Malta that serves as the game's introductory tutorial. Learn the core mechanics: movement, observation, Spycraft basics, and your first gadget interaction. The mission ends with a helicopter crash that transitions into the main story.</p>
+
           <ul>
+
             <li><strong>Follow tutorial prompts</strong> — This mission is designed to teach the four pillars. Do not skip the optional tutorials.</li>
+
             <li><strong>Practice Q-Lens scanning</strong> on every NPC in the nightclub — builds the habit for all future missions.</li>
+
             <li><strong>Eavesdrop on the bartender's conversation</strong> for bonus context on the Malta underworld.</li>
+
             <li><strong>Complete optional objectives</strong> here to earn starting Instinct for Chapter 2.</li>
+
             <li><strong>Sleeping Dart training</strong> — This is where you learn the Q-Watch's non-lethal takedown. Practice on the marked target.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "From Malta with love" (Bronze) — Complete training as a recruit in Malta &bull; "Icebreaker" (Bronze) — Survive the helicopter crash</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://www.4gamer.net/games/539/G053959/SS/001.jpg" alt="007 First Light Chapter 1 — Malta MI6 training facility" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Malta — Bond's first days at the MI6 training facility in the Mediterranean</p>
+
         </div>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 2: A Night Out -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-2</div>
+
       <div class="mission-info">
+
         <h3>A Night Out <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">London</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond's first nightclub assignment in London. Investigate Joshua Pike, a suspected arms dealer. Social stealth at its finest — blending, bluffing, and precise timing. Multiple approach routes to reach the upstairs lounge.</p>
+
           <p><strong style="color:var(--gold-light);">Three Routes to the Upstairs Lounge:</strong></p>
+
           <ul>
+
             <li><strong>The Stamp Route</strong> — Social stealth through the main floor. Requires the right attire and a passcode acquired via eavesdropping.</li>
+
             <li><strong>Above and Beyond</strong> — Climb the backstage area. More technical but avoids crowded spaces entirely.</li>
+
             <li><strong>Staff Only</strong> — Use the backstairs. Requires pickpocketing a key from a distracted staff member.</li>
+
           </ul>
+
           <ul>
+
             <li><strong>Dress code matters</strong> — Wear the right outfit or you'll attract attention before you even start.</li>
+
             <li><strong>VIP passcode</strong> — Eavesdrop on the host's conversation to learn it. Never guess.</li>
+
             <li><strong>Q-Watch phone hack</strong> — Use it on Joshua Pike's phone after you reach him.</li>
+
             <li><strong>Don't draw weapons on the dance floor</strong> — Panic will abort the mission instantly.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Shaken not stirred" (Bronze) — Complete your first assignment at the nightclub</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/d076a739da6136dc4da2c48750eb6f780d4f826d/ss_d076a739da6136dc4da2c48750eb6f780d4f826d.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 2 — London nightclub assignment" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">London — Bond's first nightclub assignment investigating Joshua Pike</p>
+
         </div>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 3: All the Time in the World -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-3</div>
+
       <div class="mission-info">
+
         <h3>All the Time in the World <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Slovakia</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>The Grand Carpathian Hotel in Slovakia. A sprawling multi-floor mission with the game's most complex puzzle and multiple challenge sets. Track a target through guest rooms, service areas, and a grand dining room.</p>
+
           <p><strong style="color:var(--gold-light);">Key Objectives & Puzzle Solutions:</strong></p>
 
-          <div class="puzzle-box">
-            <strong>Dining Room Fireplace Puzzle (Chimera Challenge)</strong><br>
-            Inspect the torn page on the laundry cart in the center of the room — it shows a chimera creature. The three fireplace dials must be set to:<br>
-            <span class="puzzle-code">LION &nbsp;·&nbsp; GOAT &nbsp;·&nbsp; SNAKE</span><br>
-            (The order does not matter — set all three and the secret door opens.)
-          </div>
+
 
           <div class="puzzle-box">
-            <strong>Hotel Manager's Safe Code</strong><br>
-            Behind the reception desk in the manager's office. The clue is on the first wine bottle on the left shelf.<br>
-            <span class="puzzle-code">1 · 9 · 5 · 2</span><br>
-            Contains intel and alternate path items.
+
+            <strong>Dining Room Fireplace Puzzle (Chimera Challenge)</strong><br>
+
+            Inspect the torn page on the laundry cart in the center of the room — it shows a chimera creature. The three fireplace dials must be set to:<br>
+
+            <span class="puzzle-code">LION &nbsp;·&nbsp; GOAT &nbsp;·&nbsp; SNAKE</span><br>
+
+            (The order does not matter — set all three and the secret door opens.)
+
           </div>
+
+
+
+          <div class="puzzle-box">
+
+            <strong>Hotel Manager's Safe Code</strong><br>
+
+            Behind the reception desk in the manager's office. The clue is on the first wine bottle on the left shelf.<br>
+
+            <span class="puzzle-code">1 · 9 · 5 · 2</span><br>
+
+            Contains intel and alternate path items.
+
+          </div>
+
+
 
           <p><strong style="color:var(--gold-light);">Room Challenge Guide:</strong></p>
+
           <ul>
+
             <li><strong>Enter Room 206</strong> — Find all 6 clues in the surrounding area first (Elementary challenge). Clues include: a torn photo, a hotel keycard, a wine receipt, a phone log, a cigarette butt, and a footprint.</li>
+
             <li><strong>Room 205 (Housekeeping)</strong> — Use the laundry disguise to access via the housekeeping cart. Pickpocket the key from the distracted maid.</li>
+
             <li><strong>Room 207 (Do Disturb)</strong> — Climb out of the open window at the end of the hallway, shimmy along the balcony ledge, climb over the railing, and kick in the doors. Requires careful timing.</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">Laundry Day Challenge Steps:</strong></p>
+
           <ul>
+
             <li><strong>Get the disguise</strong> — Upstairs opposite Room 205, distract the staff member with the vacuum cleaner. Pickpocket his key. Head downstairs to reception, turn right, unlock the door, vault over the box — the uniform is on the trolley.</li>
+
             <li><strong>Challenges:</strong> Squeaky Clean (don't get dirty during the chase), Dressed to Kill (complete without alerts), Uninterrupted Service (don't disrupt hotel staff).</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">Bellboy Hat Location:</strong></p>
+
           <ul>
+
             <li>Upstairs opposite Room 205, distract the vacuum cleaner staff, pickpocket his key.</li>
+
             <li>Go downstairs to reception, turn right, use the key on the door.</li>
+
             <li>Vault over the box — the bellboy hat is on a trolley in that room.</li>
+
           </ul>
+
+
 
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "I expect you to die" (Bronze) — Survive the hotel explosion &bull; "Skyfall" (Silver) — Jump out of a plane in Slovakia</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/6ad4e419c1eb043e3a12b9cc37166cdf204725c1/ss_6ad4e419c1eb043e3a12b9cc37166cdf204725c1.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 3 — Grand Carpathian Hotel in Slovakia" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Slovakia — The Grand Carpathian Hotel, host of the chess tournament and the Chimera puzzle</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 4: The Heart of the Matter -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-4</div>
+
       <div class="mission-info">
+
         <h3>The Heart of the Matter <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-easy">Easy</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>A hub chapter at MI6 headquarters. Bond debriefs after the Slovakia mission, receives new assignments, and can interact with Q Branch and M. Primarily an exposition and gear-up chapter.</p>
+
           <ul>
+
             <li>Explore MI6 thoroughly — there are intel files, legacy items, and NPC conversations that unlock optional content.</li>
+
             <li>Q Branch offers gadget upgrades based on your performance so far.</li>
+
             <li>Check M's office for briefings on upcoming missions.</li>
+
             <li>Training rooms are available to practice new skills.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> This is the best time to get comfortable with any gadget you haven't used yet.</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/ad4dfe02d7c437ba916114d8b1626dec348a6ca1/ss_ad4dfe02d7c437ba916114d8b1626dec348a6ca1.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 4 — MI6 Headquarters" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">MI6 — Bond debriefs and prepares for upcoming missions at headquarters</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 5: A New Home -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-5</div>
+
       <div class="mission-info">
+
         <h3>A New Home <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>A combat training and evaluation chapter at MI6. Cressida and Monroe run Bond through a gauntlet of tests to assess field readiness. Features a Lie Detector test and a Memory Game puzzle.</p>
 
+
+
           <p><strong style="color:var(--gold-light);">All 11 Challenges:</strong></p>
+
           <div class="challenge-grid">
+
             <div class="challenge-item"><strong>Pacifist</strong><p>Capture the flag without defeating any enemies</p></div>
+
             <div class="challenge-item"><strong>Ghost</strong><p>Capture the flag without being spotted</p></div>
+
             <div class="challenge-item"><strong>Assault</strong><p>Defeat all enemies before capturing the flag</p></div>
+
             <div class="challenge-item"><strong>Mr Mnemonic</strong><p>Get the right answer in Monroe's memory game — umbrella &amp; crown (Triangle/Y)</p></div>
+
             <div class="challenge-item"><strong>Something to Prove</strong><p>Complete "In at the Deep End" without knocking down soldiers</p></div>
+
             <div class="challenge-item"><strong>Cressida's Way</strong><p>Full stealth run — never get spotted</p></div>
+
             <div class="challenge-item"><strong>Monroe's Way</strong><p>Take down all 25 enemies in the compound</p></div>
+
             <div class="challenge-item"><strong>Spinning a Yarn</strong><p>Lie on all polygraph questions (answer Lie three times)</p></div>
+
             <div class="challenge-item"><strong>White Flag</strong><p>Reach the flag without taking down any soldiers</p></div>
+
             <div class="challenge-item"><strong>Always Do The Unexpected</strong><p>Never alert guards during the exercise</p></div>
+
             <div class="challenge-item"><strong>Party Crasher</strong><p>Take down all 30 compound enemies</p></div>
+
           </div>
 
+
+
           <div class="puzzle-box">
+
             <strong>Lie Detector Test:</strong> Answer <span class="puzzle-code">LIE</span> on all three questions to earn the "Spinning a Yarn" challenge. Answering truthfully on any question voids this challenge for the current run.
+
           </div>
 
+
+
           <div class="puzzle-box">
+
             <strong>Monroe's Memory Game:</strong> The two symbols are <span class="puzzle-code">UMBRELLA</span> and <span class="puzzle-code">CROWN</span> (represented as a Triangle and a Y-shape). This unlocks the "Mr Mnemonic" challenge.
+
           </div>
+
+
 
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> "Party Crasher" is the most time-consuming challenge here. Save it for a replay after you've geared up.</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/d4b2566b28d98b12ac4f018b951c45d529894c05/ss_d4b2566b28d98b12ac4f018b951c45d529894c05.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 5 — MI6 training facility" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">MI6 Training — The A New Home gauntlet with 11 challenges including Pacifist, Ghost, and Assault</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 6: A Matter of Considerable Delicacy -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-6</div>
+
       <div class="mission-info">
+
         <h3>A Matter of Considerable Delicacy <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond's first solo mission briefing and preparation. M assigns Bond to investigate Bawma's organization. A shorter chapter focused on narrative setup and gear selection.</p>
+
           <ul>
+
             <li>Choose your loadout carefully — the next several chapters lock you into your selections.</li>
+
             <li>Intel gathered here affects dialogue options in Chapter 7.</li>
+
             <li>This chapter is where TacSim unlocks after completion.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "A Change of pace" (Silver) — TacSim Escalations become available after this chapter</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/828b106be4010c1b80170cad792aaa6f1417a101/ss_828b106be4010c1b80170cad792aaa6f1417a101.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 6 — MI6 mission briefing" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">MI6 — Bond receives his first solo mission briefing from M</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 7: The Past Never Dies -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-7</div>
+
       <div class="mission-info">
+
         <h3>The Past Never Dies <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Mauritania</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond travels to Mauritania in search of leads on Bawma's network. A sprawling market-level mission with multiple distinct gameplay segments: a marketplace, a fight pit, a shooting range, and a crypto-hacking sequence. 23 challenges total — the most of any chapter.</p>
 
+
+
           <p><strong style="color:var(--gold-light);">Show Me the Money — $140K Market Challenge:</strong></p>
+
           <ul>
+
             <li>Earn $140,000 in the market district through a combination of theft, gambling, and trading.</li>
+
             <li>Steal high-value items from vendor stalls when guards look away.</li>
+
             <li>Win at the Cup Game (use Q-Lens to track the ball).</li>
+
             <li>Trade goods between market vendors for profit margins.</li>
+
             <li>Pickpocket wealthy NPCs for cash and valuables.</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">Fight Pit:</strong></p>
+
           <ul>
+
             <li>Underground combat arena. Fists-only, no gadgets.</li>
+
             <li>Parry when the <strong style="color:#e8c97a;">yellow glint</strong> reaches full brightness — red glints are unblockable (dodge only).</li>
+
             <li>Button mashing gets you killed. Enemies can hit you during locked-in animations.</li>
+
             <li>Chain takedowns against staggered opponents for crowd-favorite bonuses.</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">Cup Game (The Jewel of Jahari):</strong></p>
+
           <ul>
+
             <li>A shell-game style gambling challenge. Three cups, one ball.</li>
+
             <li><strong>Q-Lens reveals the ball's position</strong> at all times. Follow the correct cup.</li>
+
             <li>Win 5 rounds in a row for the max payout and a special challenge completion.</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">Crypto Wallet Hacking:</strong></p>
+
           <ul>
+
             <li>Use the Hacking Device to crack a cryptocurrency wallet.</li>
+
             <li>Timing-based mini-game. One wrong input locks the wallet permanently for that run.</li>
+
             <li>Save before attempting — the reward is intel on Bawma's financing network.</li>
+
           </ul>
+
+
 
           <p><strong style="color:var(--gold-light);">How to Get the Mauritania Outfit:</strong></p>
+
           <ul>
+
             <li>Find the clothing vendor in the southeast corner of the market.</li>
+
             <li>Complete the "Tailor's Favor" side objective to unlock the local disguise.</li>
+
             <li>The outfit reduces suspicion in the market district significantly.</li>
+
           </ul>
+
+
 
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Tip:</strong> 23 challenges make this the most replayable chapter in the game. Prioritize the Cup Game and Fight Pit early — they have the best payout-to-time ratio.</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/4c81e0e09db3feb0ccf680418a1b766989c8173a/ss_4c81e0e09db3feb0ccf680418a1b766989c8173a.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 7 — Mauritania market district" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Mauritania — The bustling Aleph market district with the Cup Game, Fight Pit, and crypto hacking</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 8: Beyond the Grave -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-8</div>
+
       <div class="mission-info">
+
         <h3>Beyond the Grave <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Mauritania</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>The continuation in Mauritania. Bond follows the intel from the market to a Scorpius hideout on the outskirts of the city. A combat-heavy stealth mission with limited civilian cover.</p>
+
           <ul>
+
             <li><strong>Scorpius hideout infiltration</strong> — Heavily guarded compound. Gadget loadout matters significantly here.</li>
+
             <li><strong>Use the Spy Drone</strong> — Scout the full compound layout before setting foot inside.</li>
+
             <li><strong>Break radio transmissions</strong> — Look for the yellow antenna icon above enemies. If they call for backup, the compound goes on high alert permanently.</li>
+
             <li><strong>Quiet roof entry</strong> — The east wall has a climbable section that bypasses the front gate entirely.</li>
+
             <li><strong>Underground tunnel</strong> — A sewer access point leads directly to the command room. Requires the Q-Watch laser to cut the grate.</li>
+
           </ul>
+
           
-          <div class="puzzle-box">
-            <strong>Venice Manager's Office Safe Code</strong><br>
-            Located in the manager's office during the Venice segment. The clue references a vintage wine vintage year.<br>
-            <span class="puzzle-code">1 · 9 · 5 · 2</span><br>
-            Contains intel and an alternate path keycard.
-          </div>
 
           <div class="puzzle-box">
-            <strong>Venice Laundry Room Door Code</strong><br>
-            Found on a note pinned inside a supply closet near the laundry facilities.<br>
-            <span class="puzzle-code">1 · 8 · 0 · 5</span><br>
-            Grants access to the service corridor shortcut.
+
+            <strong>Venice Manager's Office Safe Code</strong><br>
+
+            Located in the manager's office during the Venice segment. The clue references a vintage wine vintage year.<br>
+
+            <span class="puzzle-code">1 · 9 · 5 · 2</span><br>
+
+            Contains intel and an alternate path keycard.
+
           </div>
+
+
+
+          <div class="puzzle-box">
+
+            <strong>Venice Laundry Room Door Code</strong><br>
+
+            Found on a note pinned inside a supply closet near the laundry facilities.<br>
+
+            <span class="puzzle-code">1 · 8 · 0 · 5</span><br>
+
+            Grants access to the service corridor shortcut.
+
+          </div>
+
+
 
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "Nobody lives forever" (Bronze) — Find 009's body &bull; "Win, lose or die" (Bronze) — Win the auction</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/77725bbd5a29b4bd0e7b563983a17591dd942233/ss_77725bbd5a29b4bd0e7b563983a17591dd942233.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 8 — Scorpius hideout in Mauritania" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Mauritania — The Scorpius compound infiltration and 009's last known location</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 9: Uninvited -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-9</div>
+
       <div class="mission-info">
+
         <h3>Uninvited <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Monaco</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>High-stakes auction on a luxury yacht in Monaco's harbor. Multiple decks, tight corridors, and heavy guard presence. Classic Bond setting: glamour, casinos, and danger. Bond must win the auction, find 009's body, and escape the ambush that follows.</p>
+
           <ul>
+
             <li><strong>Underwater hull access</strong> — A submerged entry point bypasses topside security entirely. Use the Q-Watch laser to cut the intake grate.</li>
+
             <li><strong>Laundry chutes</strong> — Use them to move between decks undetected. Quick transport but noisy when you land.</li>
+
             <li><strong>Tuxedo reduces suspicion</strong> in the onboard casino area. Don't wear tactical gear here.</li>
+
             <li><strong>The auction itself</strong> — A social stealth sequence. Bid intelligently, read the room, and know when to back down.</li>
+
             <li><strong>Post-auction ambush</strong> — The exit triggers a combat sequence. Gadgets for crowd control (Smoke Pod, Flash Mine) are invaluable here.</li>
+
             <li><strong>Vehicle chase</strong> — Coastal highway pursuit after the yacht. Focus on shooting enemy drivers, not the car bodywork.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "Win, lose or die" (Bronze) — Win the auction &bull; "Nobody lives forever" (Bronze) — Find 009's body &bull; "Trigger Mortis" (Silver) — Escape the ambush alive</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/2e3f04c42cca344dd3ca0be30c5078719bce23ed/ss_2e3f04c42cca344dd3ca0be30c5078719bce23ed.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 9 — Monaco luxury yacht auction" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Monaco — The high-stakes auction on board a luxury yacht in the harbor</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 10: Knightfall -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-10</div>
+
       <div class="mission-info">
+
         <h3>Knightfall <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Webb Industries</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond infiltrates Webb Industries, the corporate front for Damien Webb's operations. A vertical stealth mission across multiple floors of a corporate tower. Dense with electronic surveillance and patrols.</p>
+
           <ul>
+
             <li><strong>Choose your entry</strong> — Rooftop helipad, underground parking, or lobby disguise. Each has different challenge requirements.</li>
+
             <li><strong>EMP Watch is essential</strong> — Camera-dense corridors require electronic disruption. One EMP charge clears up to 3 cameras.</li>
+
             <li><strong>Hack security terminals</strong> to disable entire floor alarm networks. Each terminal takes 10 seconds — clear the area first.</li>
+
             <li><strong>Executive floor</strong> — Nicholas Webb's penthouse. Biometric locks require a specific guard's fingerprint. Tranq him and use his hand.</li>
+
             <li><strong>Helicopter extraction</strong> — Reach the roof and commandeer the escape helicopter. This is a timed sequence.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "All time high" (Silver) — Infiltrate Nicholas Webb's penthouse &bull; "No time to die" (Silver) — Escape by helicopter</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/c5e19e3879ed6da308e952d1e8d7bdc4cd835b4c/ss_c5e19e3879ed6da308e952d1e8d7bdc4cd835b4c.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 10 — Webb Industries corporate tower" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Webb Industries — The corporate tower infiltration and Nicholas Webb's penthouse</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 11: Out of the Ashes -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-11</div>
+
       <div class="mission-info">
+
         <h3>Out of the Ashes <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>A recovery and debrief chapter at MI6 after the Monaco mission. Bond processes the loss of 009 and confronts M about the conspiracy. Narrative-heavy with new gear unlocks from Q Branch.</p>
+
           <ul>
+
             <li>New gadgets become available based on your performance in Monaco.</li>
+
             <li>Conversation choices with M here affect the tone of future dialogue.</li>
+
             <li>Access to upgraded TacSim scenarios with higher difficulty tiers.</li>
+
           </ul>
+
         </div>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 12: Going Old School -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-12</div>
+
       <div class="mission-info">
+
         <h3>Going Old School <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">London</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>A corporate gala in Kensington, London — similar setting to Chapter 2 but far higher stakes. Bond arrives with no valid cover identity and must build credentials from scratch inside the venue. Assassination attempt triggers the second half of the chapter.</p>
+
           <ul>
+
             <li><strong>Photographer impersonation</strong> — Find the real photographer's dropped name badge in the east cloakroom. Use it to bluff past lower-floor checkpoints.</li>
+
             <li><strong>Security chief</strong> — Requires more intel or an Instinct spend to bypass. Eavesdrop on the security room conversation for his schedule.</li>
+
             <li><strong>Stairwell double takedown</strong> — Use the Smoke Pod for concealment, then melee both guards simultaneously.</li>
+
             <li><strong>Garden extraction is a movement puzzle</strong> — Follow Spycraft observation markers. Don't draw a weapon. Exit in under 60 seconds with zero alerts.</li>
+
             <li><strong>Fighting the garden triggers reinforcements</strong> from the gala, turning a 60-second exit into a 15-minute firefight.</li>
+
             <li><strong>Assassination attempt</strong> — Bond survives an attack that kills a key ally. The bin lorry escape is scripted — follow the prompts.</li>
+
           </ul>
+
           
+
           <div class="puzzle-box">
+
             <strong>Iceland Penthouse Safe Code</strong><br>
+
             Located in the penthouse suite. The clue is hidden in a photograph of a historical event on the nightstand.<br>
+
             <span class="puzzle-code">1 · 4 · 9 · 3</span><br>
+
             Contains a legacy item and bonus intel on Bawma's network.
+
           </div>
 
+
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "A hard man to kill" (Bronze) — Survive assassination attempt &bull; "You only live twice" (Silver) — Defeat the assassin &bull; "Agent under fire" (Bronze) — Escape in the bin lorry</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://www.4gamer.net/games/539/G053959/SS/005.jpg" alt="007 First Light Chapter 12 — London corporate gala" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">London — The Kensington gala infiltration where Bond survives an assassination attempt</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 13: Time to Die -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-13</div>
+
       <div class="mission-info">
+
         <h3>Time to Die <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Vietnam</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond tracks Bawma to a luxury resort in Ho Chi Minh City, Vietnam. The mission unfolds across a riverfront hotel, a floating casino, and a jungle compound. The tropical setting introduces new environmental mechanics: noise in water, limited cover in open-air spaces, and boat patrols on the river.</p>
+
           <ul>
+
             <li><strong>River approach</strong> — A boat infiltration along the river is the stealthiest entry. Use the Spy Drone to mark patrol boat routes.</li>
+
             <li><strong>Floating casino</strong> — Social stealth among gamblers. The Dart Phone is ideal here — quiet takedowns without disrupting the crowd.</li>
+
             <li><strong>Jungle compound</strong> — The final stretch. Limited visibility, patrols with dogs, and tripwire traps. Use Q-Lens to spot traps before triggering them.</li>
+
             <li><strong>Bawma confrontation</strong> — Lenny Kravitz's character is a formidable hand-to-hand combatant. The fight has three phases, each requiring different tactics.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "Double or die" (Bronze) — Save Theresa Lorca</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/5cef2b25b774b09bc30780457370f734021d207a/ss_5cef2b25b774b09bc30780457370f734021d207a.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 13 — Vietnam riverfront resort" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Vietnam — The tropical riverfront hotel and floating casino in Ho Chi Minh City</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 14: Man of the Hour -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-14</div>
+
       <div class="mission-info">
+
         <h3>Man of the Hour <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-medium">Medium</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>Bond returns to MI6 after the Vietnam mission, now a target within his own organization. The chapter focuses on navigating MI6 itself as a hostile environment — political stealth rather than physical.</p>
+
           <ul>
+
             <li>Trust no one — conversation choices determine which MI6 staff are allies vs. compromised.</li>
+
             <li>Access restricted sections of MI6 using your growing clearance level.</li>
+
             <li>This chapter sets up the finale. All narrative threads converge here.</li>
+
             <li>Legacy items from earlier chapters provide context for the endgame reveals.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "Solo" (Bronze) — Leave MI6 as a rogue agent &bull; "You know my name" (Silver) — Defeat Damien Webb</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/d134165918bca5b3d420c68ccde8ace5c826c725/ss_d134165918bca5b3d420c68ccde8ace5c826c725.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 14 — MI6 political tension" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">MI6 — Bond navigates a hostile MI6 as a target within his own organization</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 15: Wave of the Future -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-15</div>
+
       <div class="mission-info">
+
         <h3>Wave of the Future <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">Antarctica</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>The penultimate chapter. Bond infiltrates a secret research facility in Antarctica — the heart of Damien Webb's operation. Extreme cold mechanics, advanced security systems, and the game's most complex stealth section.</p>
+
           <ul>
+
             <li><strong>Cold exposure mechanic</strong> — Bond must stay near heat sources or periodically warm up in safe rooms. Extended time in the cold drains health.</li>
+
             <li><strong>Advanced security</strong> — Facial recognition scanners, laser tripwires, and motion-sensor turrets. Every gadget in your arsenal is useful here.</li>
+
             <li><strong>Fire exit shortcuts</strong> — Several sections can be bypassed if you found the intel in earlier chapters.</li>
+
             <li><strong>Final choice</strong> — A narrative decision that affects which ending you get. Save before the choice point.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophies:</strong> "The writing is on the wall" (Silver) — Catch Isola &bull; "You know my name" (Silver) — Paves the way for the finale</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/1550126dc773dde15731f670725e6880e0abf5ea/ss_1550126dc773dde15731f670725e6880e0abf5ea.1920x1080.jpg?t=1779804342" alt="007 First Light Chapter 15 — Antarctica research facility" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">Antarctica — The secret research facility with extreme cold mechanics and advanced security</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
+
+
 
     <!-- CH 16: For England -->
+
     <div class="mission-item" onclick="toggleMission(this)">
+
       <div class="mission-number">CH-16</div>
+
       <div class="mission-info">
+
         <h3>For England <span class="badge-verified">VERIFIED</span></h3>
+
         <div class="mission-meta">
+
           <span class="tag tag-location">MI6</span>
+
           <span class="tag tag-hard">Hard</span>
+
         </div>
+
         <div class="mission-detail">
+
           <p>The finale. Bond returns to MI6 for a desperate last stand as the organization is attacked from within by Damien Webb's forces. All skills, gadgets, and knowledge are put to the test in a gauntlet of combat, stealth, and narrative choices.</p>
+
           <ul>
+
             <li><strong>Full arsenal available</strong> — This is the only chapter where you can switch between all unlocked gadgets freely.</li>
+
             <li><strong>Defend key locations</strong> — MI6's command center, Q Branch, and the archive room. Each defense segment has optimal gadget loadouts.</li>
+
             <li><strong>Damien Webb boss fight</strong> — A multi-phase encounter that tests combat, gadget usage, and environmental awareness.</li>
+
             <li><strong>Final choice</strong> — The game's ending is shaped by your actions across all previous chapters.</li>
+
             <li><strong>After the credits</strong> — A post-credits scene sets up potential sequel content. TacSim remains fully available for post-game play.</li>
+
           </ul>
+
           <p style="margin-top:0.8rem;"><strong style="color:var(--gold-light);">Trophy:</strong> "For king and country" (Gold) — Defend MI6</p>
+
           <img src="https://res.cloudinary.com/dpnnltytd/image/fetch/f_webp,q_auto:good,w_800/https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3768760/dbe86ebd2edb4c77d113e9e2feefeb90189fabc9/header_alt_assets_1.jpg?t=1779804342" alt="007 First Light Chapter 16 — MI6 final stand" class="mission-screenshot" loading="lazy">
+
           <p class="screenshot-caption">MI6 — The desperate final stand as Bond defends MI6 from within</p>
+
       </div>
+
       <div class="mission-status">Click to expand</div>
+
     </div>
 
+
+
   </div>
+
 </section>
 
+
+
 <!-- ADSENSE MID -->
+
 <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3330668693509117" crossorigin="anonymous"></script>
+
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3330668693509117" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 </div>
 
+
+
 <!-- WEAPONS -->
+
 <section id="weapons">
+
   <p class="section-label">// 03 · Weapons Database</p>
+
   <h2>Arsenal of a <em>00 Agent</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> All weapon stats below have been confirmed from the final build. Damage values, range, and stealth multipliers are tested from the retail version. Additional base weapons (KRISS Vector, sniper rifle) have been added based on confirmed player reports.
+
   </div>
+
+
 
   <div class="weapons-grid">
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Pistol · Sidearm</div>
+
       <h3>Walther PPK <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">"Q-Pistol" / 7.65mm</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Short-Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:40%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>High (Suppressed)</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Bond's signature weapon. Suppressed variant available from Chapter 2. Best for takedowns without raising alarm. Starting weapon in every mission.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Pistol · Premium</div>
+
       <h3>Walther P99 <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">"Agent's Mark" Skin</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Medium-High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Deluxe Edition unlockable. Better handling than the PPK but louder without a suppressor. Slightly faster reload.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Pistol · Exotic</div>
+
       <h3>Golden Gun <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">4.2mm Single-Shot</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Instant Kill</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Very Low</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">The iconic single-shot pistol from The Man with the Golden Gun. Exclusive to the $300 Legacy Edition. One shot, one kill. Single bullet, must retrieve after firing.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Pistol</div>
+
       <h3>H&K VP9 <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">Heavily Stylized</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Enemy-drop sidearm. Reliable all-rounder. Picked up from guards in later chapters.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Assault Rifle</div>
+
       <h3>AK-47 <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">7.62mm Full-Auto</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Medium-Long</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>None</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Enemy drop in later chapters. Devastating in open combat but completely unusable for stealth. High recoil — tap-fire at range.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">SMG</div>
+
       <h3>SB-10 SMG <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">Brugger & Thomet APC9K</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Short-Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:40%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Low</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">In-game designation for the B&T APC9K. Compact, high rate-of-fire. Ideal for close-quarters combat. Found from Chapter 7 onward.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">SMG</div>
+
       <h3>KRISS Vector <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">.45 ACP Super V</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Medium</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Low</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Confirmed in player reports. High-damage SMG with unique recoil system. Wielded by elite guards from Chapter 9 onward.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Shotgun</div>
+
       <h3>Super-Shorty <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">Pump-Action</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Very High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Very Short</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>None</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Devastating at close range. Best for combat-focused loadouts. Found in weapon crates from Chapter 8.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Rifle</div>
+
       <h3>AR-15 Platform <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">5.56mm Designated Marksman</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Long</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Low</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">DMR-style rifle. Semi-auto with good range. Best for open-area combat encounters in Iceland, Mauritania, and Antarctica.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Launcher</div>
+
       <h3>RPG-7 <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">PG-7VM Rocket</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>Catastrophic</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Long</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>None</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:0%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Heavy anti-vehicle launcher. Situational but devastating. Found in scripted combat sequences in later chapters.</p>
+
     </div>
 
+
+
     <div class="weapon-card">
+
       <div class="weapon-type">Thrown</div>
+
       <h3>Throwing Knives <span class="badge-verified">VERIFIED</span></h3>
+
       <span class="weapon-sub">Silent Ranged Option</span>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Damage</span><span>High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Range</span><span>Short</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+
       </div>
+
       <div class="stat-bar">
+
         <div class="stat-label"><span>Stealth</span><span>Very High</span></div>
+
         <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+
       </div>
+
       <p style="font-size:0.85rem;color:var(--gray);margin-top:1rem;">Silent, lethal, and retrievable. Best stealth option for conserving ammo. Carries a maximum of 5. Retrieve from bodies.</p>
+
     </div>
+
+
 
   </div>
+
 </section>
 
+
+
 <!-- GADGETS -->
+
 <section id="gadgets">
+
   <p class="section-label">// 04 · Q Branch Gadgets</p>
+
   <h2>Tools of the <em>Trade</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> All gadget unlock conditions and functionality have been verified against the final retail build. Gadget interactions and combo strategies listed below are confirmed working.
+
   </div>
+
+
 
   <div class="gadgets-grid">
 
+
+
     <div class="gadget-card">
+
       <h3>Q-Lens</h3>
+
       <span class="gadget-unlock">Available from start</span>
+
       <p>Bond's reconnaissance tool. Highlights hackable devices, enemies through walls, interactive objects, and patrol routes. Also reveals collectible locations (bookmark icon), the ball under cups in the Cup Game, and enemy gear loadouts. Hold L1 (or equivalent) to scan every room before entry.</p>
+
       <div class="gadget-tip">Scan every single room before entering. It reveals enemy counts, camera positions, hidden loot, and trap locations you'd otherwise miss. Re-scan after clearing a room — new items may appear.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Q-Watch (OMEGA)</h3>
+
       <span class="gadget-unlock">Chapter 1 · Always Active</span>
+
       <p>Bond's primary multi-tool. Functions include: laser cutter (silent lock breaking, cutting cables), camera loop (disables camera feeds for 45 seconds), environmental triggers (chandeliers, gas lines), and rope cutting. Also houses the Sleeping Dart launcher and thermal vision.</p>
+
       <div class="gadget-tip">Use the laser on locked doors before searching for keycards. It's silent, permanent, and never triggers suspicion. Covers 8 of 12 main mission objectives.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Sleeping Dart (Q-Watch)</h3>
+
       <span class="gadget-unlock">Chapter 1</span>
+
       <p>Silent single-target non-lethal takedown integrated into the Q-Watch. Targets slump silently with no reaction noise. 10-12 second reload cycle — treat it as a one-shot-per-engagement tool. Ineffective against armored guards.</p>
+
       <div class="gadget-tip">Don't use in public atriums — civilian witnesses can report it. Save for interior guards only. Cannot penetrate body armor — use the Tranquilizer Pen for armored targets.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Smoke Pod</h3>
+
       <span class="gadget-unlock">Chapter 2 (London Gala)</span>
+
       <p>Creates a 4-5 second visual obstruction. Use it to set up multi-target melee takedowns, reposition under pressure, or create confusion in tight spaces. Essential for the stairwell encounter in Chapter 2 and many combat situations later.</p>
+
       <div class="gadget-tip">Pair with melee for simultaneous double takedowns. Smoke + melee is faster and quieter than darts for grouped guards. Also useful for covering gadget activations.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Dart Phone</h3>
+
       <span class="gadget-unlock">Available from start</span>
+
       <p>Smartphone modified to fire tranquilizer darts at range. Non-lethal takedown with no body reaction noise. Ideal for crowded social spaces like Monaco and Tokyo. Longer effective range than the Q-Watch's built-in dart.</p>
+
       <div class="gadget-tip">Tag targets with Q-Lens first, tranq from distance, move on. Fastest stealth clear method in the game. The Dart Phone is quieter and has better range than the watch-mounted dart.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Laser Strap</h3>
+
       <span class="gadget-unlock">Chapter 5 (MI6 Training)</span>
+
       <p>A versatile gadget that dazes enemies, opens new paths, or creates environmental distractions. Can knock down chandeliers and other hanging objects onto enemies for accident kills. Also usable as a tripwire in chokepoints.</p>
+
       <div class="gadget-tip">Accident kills (chandelier drops, electrified puddles) count as environmental — bodies can be found without voiding Silent Assassin rating. The "Disarming personality" trophy requires this gadget.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Flash Mine</h3>
+
       <span class="gadget-unlock">Chapter 5 (MI6 Training)</span>
+
       <p>Deployable mine that produces a burst of light on activation, momentarily stunning all enemies in a generous radius. Useful for crowd control during combat or as a distraction to slip past patrols. Can be picked up after activation if not triggered.</p>
+
       <div class="gadget-tip">Place around corners or at chokepoints. The stun window is generous — enough for a full room clear. Also works on cameras and turrets.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>EMP Watch</h3>
+
       <span class="gadget-unlock">Chapter 5 (MI6 Training)</span>
+
       <p>Loops camera feeds for 45 seconds, disabling all electronic surveillance in a radius. Do not shoot cameras — the EMP Watch approach is silent and leaves no evidence. Also disables electronic locks and security turrets temporarily.</p>
+
       <div class="gadget-tip">Three cameras at once? One EMP charge clears them all. Essential for the Tokyo mission's vertical stealth sections and the Antarctica facility.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Hacking Device</h3>
+
       <span class="gadget-unlock">Chapter 4 (After Mission 3)</span>
+
       <p>Portable terminal hacker. Opens digital-locked doors and accesses restricted terminals. Paired with the Q-Phone for extended functionality. Required for the crypto wallet hacking segment in Chapter 7.</p>
+
       <div class="gadget-tip">Some locked rooms can only be opened by hacking. Always check if a door can be hacked before looking for keys. The hacking mini-game is timing-based — save before attempting on critical doors.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Spy Drone</h3>
+
       <span class="gadget-unlock">Chapter 2 (After first mission)</span>
+
       <p>Reconnaissance drone. Marks guards, cameras, patrol routes, and alternate entry points from a safe distance. Saves time and Instinct by revealing the full floor plan before Bond moves in. Can be recalled and redeployed.</p>
+
       <div class="gadget-tip">Deploy before entering any major new area. The intel it provides makes Silent Assassin runs significantly easier. Can also mark traps and tripwires.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Sonic Emitter Coin</h3>
+
       <span class="gadget-unlock">Chapter 5 (MI6 Training)</span>
+
       <p>Remote distraction device disguised as a coin. Creates a noise at the target location, drawing guards away from their posts. Works through walls and around corners. Can be used multiple times before being consumed.</p>
+
       <div class="gadget-tip">The most reliable way to split up paired guards. Toss one down a corridor, take the straggler, then circle back. Also works as a brief diversion during combat.</div>
+
     </div>
 
+
+
     <div class="gadget-card">
+
       <h3>Tranquilizer Pen</h3>
+
       <span class="gadget-unlock">Chapter 6 (Before Mauritania)</span>
+
       <p>Pen-shaped injection device for silent takedowns on armored targets. Bypasses body armor that sleeping darts cannot penetrate. Limited charges — conserve for priority targets only.</p>
+
       <div class="gadget-tip">Armored guards are immune to regular darts. The Tranq Pen is your only non-lethal option against them. Prioritize it for the Scorpius compound and Webb Industries missions.</div>
+
     </div>
+
+
 
   </div>
+
 </section>
 
+
+
 <!-- BEGINNER'S GUIDE -->
+
 <section id="beginners">
+
   <p class="section-label">// 05 · Beginner's Guide</p>
+
   <h2>Play Like a <em>00 Agent</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> All tips below have been tested against the final build. These strategies work in the shipping version of the game. Community-discovered techniques will be added as they emerge.
+
   </div>
 
+
+
   <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
+
     Master the four pillars — Spycraft, Instinct, Gadgets, and Combat — with these essential tips.
+
     Spycraft is <strong>always free</strong>: eavesdropping, pickpocketing, and environmental observation cost nothing.
+
   </p>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin-bottom:1.5rem;">8-Step Entry Protocol for Every New Area</h3>
 
+
+
   <div class="tips-list">
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">01</div>
+
       <div>
+
         <h3>Observe Before You Act</h3>
+
         <p>30 seconds of watching guard patrols saves 5 minutes of backtracking. Use the Q-Lens to scan the room through walls. Know enemy counts, camera positions, and patrol routes before moving. Re-scan after major events — patrols may change.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">02</div>
+
       <div>
+
         <h3>Eavesdrop on Every Conversation</h3>
+
         <p>Ambient NPC conversations contain guard schedules, keycard locations, passcodes, and full alternate route information. Grey optional dialogue markers almost always unlock a better path. Every mission has at least one critical eavesdrop clue.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">03</div>
+
       <div>
+
         <h3>Use the Q-Watch Laser on Doors First</h3>
+
         <p>Before hunting for keycards, try the watch laser. It's silent, permanent, and never registers as suspicious activity. Only search for keycards when the laser can't open something. The laser covers 8 of 12 primary objectives.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">04</div>
+
       <div>
+
         <h3>Pickpocket Before You Bluff</h3>
+
         <p>Pickpocketing keycards from distracted guards costs 0 Instinct. Bluffing costs 1 Instinct unit. Always pickpocket first. A guard in conversation is a free pickpocket window. Guards who are eating, smoking, or using their phones are also vulnerable.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">05</div>
+
       <div>
+
         <h3>Build Instinct Through Optional Objectives</h3>
+
         <p>Instinct refills come from completing optional mission objectives, not just main markers. Go out of your way to complete them — you'll need Instinct for critical bluffs and Focus moments later. Instinct carries over between checkpoints.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">06</div>
+
       <div>
+
         <h3>Shoot Legs, Not Center Mass</h3>
+
         <p>Shooting guards in the legs incapacitates them without triggering "License to Kill" (lethal escalation mode). Once License to Kill is active, it persists for the entire mission segment. Leg shots are the safest non-lethal ranged option.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">07</div>
+
       <div>
+
         <h3>Break Radio Transmissions</h3>
+
         <p>When a guard has a yellow antenna icon above their head, they are calling for backup. Take them down immediately — a full alarm means permanent high alert and heavy reinforcements. This is more important than stealth in most encounters.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">08</div>
+
       <div>
+
         <h3>Replay Early Missions With New Gear</h3>
+
         <p>Returning to earlier missions with gadgets unlocked later opens new routes and collectibles. Chapter Select preserves your loadout. TackSim rewards also unlock gear that changes how you approach the campaign.</p>
+
       </div>
+
     </div>
+
+
 
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">Combat &amp; Stealth Mechanics</h3>
 
+
+
   <div class="overview-grid" style="margin-bottom:0;">
+
     <div class="overview-card">
+
       <h3>Parry Timing</h3>
+
       <p>Yellow glint = parryable (tap block at full brightness). Red glint = unblockable (dodge only). Mistiming red glints is the #1 cause of combat deaths.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>AI Vision</h3>
+
       <p>110&deg; primary cone, 160&deg; peripheral. Stay low and use cover-to-cover movement. Guards can see through glass and open doorways.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Sound Radius</h3>
+
       <p>Sprinting = 15m noise radius. Crouch-walk within 8m of enemies to stay silent. Weapons fire is audible across entire floors.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Body Hiding</h3>
+
       <p>Unconscious bodies must go in lockers, dumpsters, or deep shadows (0% light). Bodies found in the open void Silent Assassin. Stacking bodies in the same container is risky.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Camera Protocol</h3>
+
       <p>Don't shoot cameras. Use EMP Watch to loop feeds for 45 seconds. Shooting triggers instant alerts and sometimes reinforcements.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Wardrobe Matters</h3>
+
       <p>Dark turtleneck = 40% less fabric rustling. White tuxedo in shadows = 15% faster detection. Each location has an optimal disguise.</p>
+
     </div>
+
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">5 Common Mistakes New Players Make</h3>
 
+
+
   <div class="tips-list">
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">!</div>
+
       <div>
+
         <h3>Drawing the Silenced Pistol Too Early</h3>
+
         <p>Any drawn weapon raises nearby NPC awareness to Yellow Alert — even if you don't fire. Use the Q-Watch Sleeping Dart instead. It's quieter and doesn't escalate the area. The penalty for being caught with a drawn weapon is severe.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">!</div>
+
       <div>
+
         <h3>Skipping Eavesdrop Conversations</h3>
+
         <p>Grey optional markers are not filler. They contain critical path information: alternative routes, guard shift changes, and key locations. Players who skip them often hit dead ends and miss entire alternate paths.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">!</div>
+
       <div>
+
         <h3>Wasting Instinct on Bluffs</h3>
+
         <p>A guard in conversation is a free pickpocket window. Always exhaust free options (Spycraft) before spending resources (Instinct). Pickpocketing costs zero; bluffing costs one. Instinct is better saved for critical story moments.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">!</div>
+
       <div>
+
         <h3>Triggering License to Kill Unnecessarily</h3>
+
         <p>Once active, License to Kill doesn't deactivate mid-mission. It escalates all future encounters to lethal force. Only engage it when the game forces you into combat. Leg shots prevent this escalation.</p>
+
       </div>
+
     </div>
 
+
+
     <div class="tip-item">
+
       <div class="tip-num">!</div>
+
       <div>
+
         <h3>Button Mashing in Melee Combat</h3>
+
         <p>Enemies can hit you while you're locked in attack animations. Time your strikes. Parry yellow glints, dodge red glints, and strike during enemy recovery windows. Patience beats aggression in hand-to-hand.</p>
+
       </div>
+
     </div>
+
+
 
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">The Situational Decision Tree</h3>
 
+
+
   <div class="tree-box">
+
     <strong style="color:var(--white);">No guards aware</strong>
+
     <span class="arrow">&rarr;</span> Spycraft first (observe, eavesdrop, find shortcuts)
+
     <span class="branch">
+
       <strong style="color:var(--white);">Single guard blocking path</strong>
+
       <span class="arrow">&rarr;</span> Q-Watch (laser for doors, sleeping dart for guards)
+
       <span class="branch">
+
         <strong style="color:var(--white);">Guard suspicious but not alerted</strong>
+
         <span class="arrow">&rarr;</span> Bluff via Instinct
+
         <span class="branch">
+
           <strong style="color:var(--white);">Guard alerted, others unaware</strong>
+
           <span class="arrow">&rarr;</span> Smoke + melee takedown
+
           <span class="branch">
+
             <strong style="color:var(--white);">Multiple guards alerted</strong>
+
             <span class="arrow">&rarr;</span> Reposition, use environmental hazards
+
             <span class="branch">
+
               <strong style="color:var(--white);">Full alert, enemies armed</strong>
+
               <span class="arrow">&rarr;</span> Commit to combat fully
+
             </span>
+
           </span>
+
         </span>
+
       </span>
+
     </span>
+
   </div>
 
+
+
 </section>
+
+
 
 <!-- TROPHIES -->
+
 <section id="trophies">
+
   <p class="section-label">// 06 · Trophies & Achievements</p>
+
   <h2>Complete <em>Trophy</em> List</h2>
+
   <div class="divider"></div>
+
   <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
+
     <strong>38 trophies total:</strong> 1 Platinum, 3 Gold, 14 Silver, 20 Bronze. No difficulty-related trophies.
+
     Estimated time to 100%: ~20-25 hours. All trophies can be obtained in single-player — no online requirements.
+
   </p>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> Full official trophy list confirmed and verified from the final build. Trophy names reference classic Bond films — a treat for longtime fans. All descriptions below are accurate for version 1.006.
+
   </div>
+
+
 
   <div class="table-wrap">
+
     <table class="trophy-table">
+
       <thead>
+
         <tr><th style="width:30px;"></th><th style="width:220px;">Trophy Name</th><th>Description</th><th style="width:80px;">Rarity</th></tr>
+
       </thead>
+
       <tbody>
+
         <tr><td colspan="4" class="trophy-category">&#9733; Platinum</td></tr>
+
         <tr>
+
           <td></td>
+
           <td class="trophy-name">The name's Bond. James Bond</td>
+
           <td>Collect all other trophies</td>
+
           <td class="trophy-rarity trophy-plat">Platinum</td>
+
         </tr>
 
+
+
         <tr><td colspan="4" class="trophy-category">&#9733; Story Trophies (18 — Automatic, Unmissable)</td></tr>
+
         <tr><td></td><td class="trophy-name">Icebreaker</td><td>Survive the helicopter crash</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">From Malta with love</td><td>Complete training as a recruit in Malta</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Shaken not stirred</td><td>Complete your first assignment at the nightclub</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">I expect you to die</td><td>Survive the explosion at the hotel in Slovakia</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Skyfall</td><td>Jump out of a plane in Slovakia</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Win, lose or die</td><td>Win the auction</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Nobody lives forever</td><td>Find 009's body</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Trigger Mortis</td><td>Escape the ambush alive</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">A hard man to kill</td><td>Survive an assassination attempt</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">You only live twice</td><td>Defeat the assassin</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Agent under fire</td><td>Escape in the bin lorry</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">All time high</td><td>Infiltrate Nicholas Webb's penthouse</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">No time to die</td><td>Escape by helicopter</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Double or die</td><td>Save Theresa Lorca</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">You know my name</td><td>Defeat Damien Webb</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Solo</td><td>Leave MI6 as a rogue agent</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">The writing is on the wall</td><td>Catch Isola</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">For king and country</td><td>Defend MI6</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
+
+
         <tr><td colspan="4" class="trophy-category">&#9733; Collectible Trophies (5)</td></tr>
+
         <tr><td></td><td class="trophy-name">The world is not enough</td><td>Collect all 10 postcards</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">For your eyes only</td><td>Unlock all 23 MI6 files (Intel)</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Recovered assets</td><td>Collect all 14 mementos</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Casino Royale</td><td>Collect all 36 playing cards</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">A collector's habit</td><td>Find ALL 92 collectibles</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
+
+
         <tr><td colspan="4" class="trophy-category">&#9733; Combat &amp; Miscellaneous Trophies (9)</td></tr>
+
         <tr><td></td><td class="trophy-name">Soft landing</td><td>Hold circle on an enemy and push them over a ledge</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Sleight of hand</td><td>Shoot a weapon out of an enemy's hand (easiest in Chapter 3 training)</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Positively shocking</td><td>Grab an enemy and drag them into a taser line from another enemy</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Short fuse</td><td>Shoot an enemy while they're throwing a grenade (Chapter 9 or 10)</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">He'll live</td><td>Knock out an enemy by shooting them in the legs until they go down</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Firestarter</td><td>Push an enemy into a wall-mounted fire extinguisher</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Damp squib</td><td>Hack a thrown grenade with your Q-Watch before it explodes</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Disarming personality</td><td>Use the Laser Strap on an armed enemy to disarm them</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
+
         <tr><td></td><td class="trophy-name">Always have an exit plan</td><td>Use a Q-Watch gadget during a confrontation in a restricted area</td><td class="trophy-rarity trophy-bronze">Bronze</td></tr>
 
+
+
         <tr><td colspan="4" class="trophy-category">&#9733; TacSim Mode Trophies (4)</td></tr>
+
         <tr><td></td><td class="trophy-name">What if&hellip;?</td><td>Complete 1 Operation in TacSim (unlocked after finishing the story)</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">A Change of pace</td><td>Complete 1 Escalation in TacSim (unlocked after Chapter 6)</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">Keep moving forward</td><td>Achieve Clearance Level 3 in TacSim (earn XP)</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
         <tr><td></td><td class="trophy-name">The readiness is all</td><td>Beat Tier 3 of any Escalation in TacSim</td><td class="trophy-rarity trophy-gold">Gold</td></tr>
 
+
+
         <tr><td colspan="4" class="trophy-category">&#9733; Legacy Trophy (1)</td></tr>
+
         <tr><td></td><td class="trophy-name">A Legacy of spycraft</td><td>Discover all 9 legacy items</td><td class="trophy-rarity trophy-silver">Silver</td></tr>
+
       </tbody>
+
     </table>
+
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">100% Completion Roadmap</h3>
+
   <div class="tips-list">
+
     <div class="tip-item">
+
       <div class="tip-num">01</div>
+
       <div>
+
         <h3>Play the Story First</h3>
+
         <p>All 18 story trophies unlock automatically through campaign progression. Don't worry about missable content — use Chapter Select to clean up afterwards. Play on Novice difficulty to speed through.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">02</div>
+
       <div>
+
         <h3>Collectibles Require Thorough Exploration</h3>
+
         <p>92 collectibles total: 36 playing cards, 23 Intel files, 14 Mementos, 10 postcards, 9 Legacy items. Use Q-Lens extensively in every chapter. Revisit missions with new gadgets — some collectibles are only reachable with late-game gear.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">03</div>
+
       <div>
+
         <h3>Farm Combat Trophies in Chapter 3</h3>
+
         <p>Chapter 3's training area is the best place to earn combat trophies. "Sleight of hand" (shoot weapon from hand), "He'll live" (leg shots), and "Firestarter" (fire extinguisher push) are all easily earned here.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">04</div>
+
       <div>
+
         <h3>TacSim Is Required for Platinum</h3>
+
         <p>You need Clearance Level 3 and Tier 3 of an Escalation. TacSim is replayable with modifiers and leaderboards. Focus on one Escalation and push all 3 tiers — it's faster than grinding Operations for XP.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">05</div>
+
       <div>
+
         <h3>Collectible Rewards Are Account-Wide</h3>
+
         <p>Collectibles carry over between save files. Use Chapter Select and Checkpoint reload to clean up without replaying entire missions. Legacy items are tied to story progress — some won't appear until specific chapters are unlocked.</p>
+
       </div>
+
     </div>
+
   </div>
 
+
+
 </section>
+
+
 
 <!-- SECRETS & EASTER EGGS -->
+
 <section id="secrets">
+
   <p class="section-label">// 07 · Secrets &amp; Easter Eggs</p>
+
   <h2>Hidden <em>Discoveries</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Community Discovered:</strong> These secrets have been confirmed by players in the first week since launch. We will update this section as more hidden content is found.
+
   </div>
+
+
 
   <div class="secrets-grid">
+
     <div class="secret-card">
+
       <h4>Press Badge in Mission 1</h4>
+
       <p>Found in a plant pot behind the first stairs in the Slovakia hotel. Using it opens a faster route through the press area without needing to bluff.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Self Check-In Secret Entrance</h4>
+
       <p>From the metal detectors in Mission 1, vault over the blue tarp on the right, climb the pipe, and kick open the metal gate. Bypasses the entire front desk checkpoint.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Traveling Light Trophy</h4>
+
       <p>In the aircraft sequence, hold L1/LB to open the plane doors, then hold R2/RT on soldiers to charge them through the open door. Throw 3 hostiles from the aircraft.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>A Beautiful Waste</h4>
+
       <p>Destroy 5 premium wine bottles in Mission 3. Use R2 on an enemy at display cases to smash them into it, then smash the bottles directly.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Classified Papers (TacSim)</h4>
+
       <p>In the Tactical Simulations hub, turn around from the terminal and look for a table with a mannequin head wearing VR goggles. The Classified Papers are sitting there — 1,000 Intel + 500 XP without running any simulation.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Classic Bond Film References</h4>
+
       <p>Trophy names are all Bond film references. The hotel safe code (1952) references the year Casino Royale was written. M's office contains easter eggs referencing every major Bond film.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Post-Credits Scene</h4>
+
       <p>After the credits roll, stay through to the end. A post-credits scene hints at future content and a potential sequel setup involving a character from Bond's past.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Legacy Item Locations</h4>
+
       <p>9 legacy items total, representing key Bond artifacts. One is hidden in MI6 behind a bookshelf (interact with the red book). Another is in the Antarctica facility's locked archive room.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Venice Safe Code References</h4>
+
       <p>The Venice manager's office safe code (1952) references the year Ian Fleming wrote Casino Royale. The laundry room code (1805) references the Battle of Trafalgar — a nod to Nelson's naval victory.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Iceland Penthouse Historical Clue</h4>
+
       <p>The penthouse safe code (1493) references Columbus's second voyage. The clue photograph shows a 15th-century caravel — a subtle history lesson hidden in plain sight.</p>
+
     </div>
+
     <div class="secret-card">
+
       <h4>Total Collectibles Confirmed</h4>
+
       <p>92 collectibles total: 36 playing cards, 23 Intel files, 14 Mementos, 10 postcards, and 9 Legacy items. The "A collector's habit" Gold trophy requires all 92. Use Q-Lens extensively — collectibles show a bookmark icon when scanned.</p>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- TACSIM -->
+
 <section id="tacsim">
+
   <p class="section-label">// 08 · TacSim Mode</p>
+
   <h2>Test Your <em>Skills</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
+
     <strong>Launch Day Verified:</strong> TacSim is the game's replayable challenge mode, run by Dr. Selina Tan (voiced by Gemma Chan). All details below are confirmed from the final build.
+
   </div>
+
+
 
   <p style="color:var(--gray);max-width:680px;margin-bottom:2rem;font-size:1rem;">
+
     TacSim (Tactical Simulation) is a standalone challenge mode where you replay combat and infiltration scenarios
+
     with modifiers, leaderboards, and unlockable rewards. It's the fastest way to earn Intel for upgrades
+
     and required for several trophies including the Platinum.
+
   </p>
 
+
+
   <div class="overview-grid" style="margin-bottom:0;">
+
     <div class="overview-card">
+
       <h3>Operations</h3>
+
       <p>Standard challenge missions with fixed parameters. Complete for Intel points and leaderboard rankings. Unlocked after finishing the story.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Escalations</h3>
+
       <p>Tiered difficulty challenges. Each tier adds new modifiers (powerful enemies, no bullets, timed, limited gadgets). Beating Tier 3 is required for the Gold trophy.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Intel Rewards</h3>
+
       <p>Earned through TacSim. Redeem for gadget upgrades, new weapons, outfits, weapon skins, and mission modifiers. Grinding Clearance Level 3 is the most time-consuming part of the Platinum.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Leaderboards</h3>
+
       <p>Global and friends-only leaderboards for every scenario. Score based on time, stealth rating, and optional objectives. Replayability is built into the scoring system.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Post-Launch Content</h3>
+
       <p>Additional Operations and Escalations confirmed as free updates. New modifiers and rewards roadmap to be announced. IO Interactive has committed to post-launch support.</p>
+
     </div>
+
     <div class="overview-card">
+
       <h3>Unlock Path</h3>
+
       <p>Operations unlock after finishing the story. Escalations unlock after Chapter 6. Progress carries across all save slots. Clearance levels unlock harder scenarios and better rewards.</p>
+
     </div>
+
   </div>
+
+
 
   <h3 style="font-weight:300;color:var(--gold-light);margin:2.5rem 0 1.5rem;">TacSim XP Farming Tips</h3>
+
   <div class="tips-list">
+
     <div class="tip-item">
+
       <div class="tip-num">01</div>
+
       <div>
+
         <h3>Classified Papers Easter Egg</h3>
+
         <p>Before starting any simulation, turn around from the terminal and grab the Classified Papers from the table with the mannequin head. This gives 1,000 Intel and 500 XP instantly — repeatable once per session.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">02</div>
+
       <div>
+
         <h3>Focus on One Escalation</h3>
+
         <p>Don't spread your play across multiple Escalations. Focus on pushing one all the way to Tier 3. This is more efficient for XP and required for "The readiness is all" Gold trophy anyway.</p>
+
       </div>
+
     </div>
+
     <div class="tip-item">
+
       <div class="tip-num">03</div>
+
       <div>
+
         <h3>Prioritize Stealth Scores</h3>
+
         <p>Stealth completions give significantly higher score multipliers than combat approaches. Even if it takes longer, the XP per minute is better with Silent Assassin ratings.</p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- PATCHES -->
+
 <section id="patches">
+
   <p class="section-label">// 09 · Patch & Update Tracker</p>
+
   <h2>Stay <em>Current</em></h2>
+
   <div class="divider"></div>
 
+
+
   <div class="notice-bar">
-    <strong>Latest (May 28, 2026):</strong> v1.007 confirmed as Day One patch with stronger client protections and anti-tamper systems. No FSR 4 support at launch — only DLSS 4.5 Super Resolution and Dynamic MFG. Path Tracing + DLSS Ray Reconstruction planned for Summer 2026. AMD users can use OptiScaler 0.9.2a as an alternative. Switch 2 version also confirmed for Summer 2026.
+
+    <strong>Latest (June 1, 2026):</strong> Patch 1.0.1 is now live addressing multiple crash fixes and known issues. v1.007 Day One patch with stronger client protections and anti-tamper systems also active. No FSR 4 support at launch &mdash; only DLSS 4.5 Super Resolution and Dynamic MFG. Path Tracing + DLSS Ray Reconstruction planned for Summer 2026. AMD users can use OptiScaler 0.9.2a as an alternative. Switch 2 version also confirmed for Summer 2026.
+
   </div>
+
+
 
     <div class="patch-grid">
+
     <div class="patch-card">
+
       <h3>Day 1 Patch (v1.006)</h3>
+
       <span class="status status-live">LIVE</span>
+
       <p><strong>Size:</strong> ~25 GB on PS5. Required for full game — disc contains only the prologue. <strong>Final install:</strong> ~51 GB PS5, ~55 GB Xbox, ~80 GB PC. Stability improvements, performance optimizations, and minor bug fixes. RAM requirement lowered to 16GB across all tiers. DLSS 4.5 with Super Resolution and Dynamic Multi Frame Generation enabled.</p>
-    </div>
-    <div class="patch-card">
-      <h3>Hotfix v1.007</h3>
-      <span class="status status-live">LIVE</span>
-      <p><strong>Size:</strong> ~3.2 GB. Day One patch with stronger client protections, progression validation, and anti-tamper systems. Also addresses audio sync issues in Chapter 7 (Mauritania market), fixes a softlock in the Monaco yacht auction sequence, and resolves a rare crash during TacSim Escalation Tier 3 completions. Improved save game stability.</p>
-    </div>
-    <div class="patch-card">
-      <h3>PC Graphics Technology</h3>
-      <span class="status status-live">LIVE</span>
-      <p>007 First Light uses DLSS 4.5 with Super Resolution and Dynamic Multi Frame Generation. <strong>No FSR 4 support</strong> at launch. Path Tracing and DLSS Ray Reconstruction are planned as a free update in Summer 2026. For AMD GPU users, <strong>OptiScaler 0.9.2a</strong> (by cdozdil) has been tested as a working alternative on RX 9070 XT. Source: VideoCardz.</p>
+
     </div>
 
     <div class="patch-card">
-      <h3>PS5 Pro Enhanced</h3>
+
+      <h3>Hotfix v1.007</h3>
+
       <span class="status status-live">LIVE</span>
+
+      <p><strong>Size:</strong> ~3.2 GB. Day One patch with stronger client protections, progression validation, and anti-tamper systems. Also addresses audio sync issues in Chapter 7 (Mauritania market), fixes a softlock in the Monaco yacht auction sequence, and resolves a rare crash during TacSim Escalation Tier 3 completions. Improved save game stability.</p>
+
+    </div>
+
+    <div class="patch-card">
+
+      <h3>PC Graphics Technology</h3>
+
+      <span class="status status-live">LIVE</span>
+
+      <p>007 First Light uses DLSS 4.5 with Super Resolution and Dynamic Multi Frame Generation. <strong>No FSR 4 support</strong> at launch. Path Tracing and DLSS Ray Reconstruction are planned as a free update in Summer 2026. For AMD GPU users, <strong>OptiScaler 0.9.2a</strong> (by cdozdil) has been tested as a working alternative on RX 9070 XT. Source: VideoCardz.</p>
+
+    </div>
+
+
+
+    <div class="patch-card">
+
+      <h3>PS5 Pro Enhanced</h3>
+
+      <span class="status status-live">LIVE</span>
+
       <p>PSSR 2.0 upscaling support for PS5 Pro targeting 60 FPS with ray tracing. IO Interactive calls it a "meaningful jump in image quality" over base PS5. Cleaner, more stable image quality with upgraded PSSR implementation.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Path Tracing Update</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>Free update adding full Path Tracing (full ray tracing) and DLSS Ray Reconstruction. Requires RTX-series GPU or equivalent. Physically based shadows, global illumination, and reflections. Confirmed by IO Interactive as a free post-launch addition.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Pathfinding & AI</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>Ray-traced pathfinding for AI navigation confirmed for the same Summer 2026 update. Improves enemy AI movement around complex geometry and dynamic obstacles. Currently enemies use standard navmesh pathfinding.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Switch 2 Release</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>007 First Light coming to Nintendo Switch 2 in Summer 2026. Cross-progression details TBA. Likely includes all post-launch content and patches up to that point. Specific release date not yet announced.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>TacSim Content Drops</h3>
+
       <span class="status status-coming">TBA</span>
+
       <p>Additional Operations, Escalations, and rewards confirmed as free post-launch content. New missions and modifiers in development. IO Interactive has committed to ongoing support for the TacSim mode. Details to be announced.</p>
+
     </div>
+
   </div>
+
     <div class="patch-card">
+
       <h3>PS5 Pro Enhanced</h3>
+
       <span class="status status-live">LIVE</span>
+
       <p>PSSR 2.0 upscaling support for PS5 Pro targeting 60 FPS with ray tracing. IO Interactive calls it a "meaningful jump in image quality" over base PS5. Cleaner, more stable image quality with upgraded PSSR implementation.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Path Tracing Update</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>Free update adding full Path Tracing (full ray tracing) and DLSS Ray Reconstruction. Requires RTX-series GPU or equivalent. Physically based shadows, global illumination, and reflections. Confirmed by IO Interactive as a free post-launch addition.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Pathfinding &amp; AI</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>Ray-traced pathfinding for AI navigation confirmed for the same Summer 2026 update. Improves enemy AI movement around complex geometry and dynamic obstacles. Currently enemies use standard navmesh pathfinding.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>Switch 2 Release</h3>
+
       <span class="status status-coming">SUMMER 2026</span>
+
       <p>007 First Light coming to Nintendo Switch 2 in Summer 2026. Cross-progression details TBA. Likely includes all post-launch content and patches up to that point. Specific release date not yet announced.</p>
+
     </div>
+
     <div class="patch-card">
+
       <h3>TacSim Content Drops</h3>
+
       <span class="status status-coming">TBA</span>
+
       <p>Additional Operations, Escalations, and rewards confirmed as free post-launch content. New missions and modifiers in development. IO Interactive has committed to ongoing support for the TacSim mode. Details to be announced.</p>
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <!-- ADSENSE BOTTOM -->
+
 <div style="max-width:1100px;margin:0 auto;padding:0 2rem 3rem;">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3330668693509117" crossorigin="anonymous"></script>
+
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3330668693509117" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 </div>
 
+
+
 <!-- FOOTER -->
+
 <footer>
+
   <div class="footer-inner">
+
     <div class="footer-logo">007 First Light · Strategy Guide</div>
-    <p>Fan-made guide. Last updated: May 28, 2026. Continuously updated with community discoveries and verified information.<br>
+
+    <p>Fan-made guide. Last updated: June 1, 2026. Continuously updated with community discoveries and verified information.<br>
+
     007 First Light &copy; IO Interactive / Metro-Goldwyn-Mayer. This is an unofficial guide site.</p>
+
   </div>
+
 </footer>
 
+
+
 <script>
+
   function toggleMission(el) {
+
     el.classList.toggle('open');
+
     const status = el.querySelector('.mission-status');
+
     status.textContent = el.classList.contains('open') ? 'Click to close' : 'Click to expand';
+
   }
 
+
+
   const observer = new IntersectionObserver((entries) => {
+
     entries.forEach(entry => {
+
       if (entry.isIntersecting) {
+
         entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+
           bar.style.width = bar.style.width;
+
         });
+
       }
+
     });
+
   }, { threshold: 0.3 });
 
+
+
   document.querySelectorAll('.weapon-card').forEach(card => observer.observe(card));
+
 </script>
 
+
+
 </body>
+
 </html>
