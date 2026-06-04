@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://007firstlightguide.com/sitemap.xml
